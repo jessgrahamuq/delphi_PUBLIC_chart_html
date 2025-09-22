@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6.2 Increased inequality and decline in employment quality - Required Actors Responsibility Assessment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #a32035;
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        .nav-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .nav-pill {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 25px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'Figtree', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            color: #555;
+        }
+
+        .nav-pill:hover {
+            background: #e9ecef;
+            border-color: #a32035;
+        }
+
+        .nav-pill.active {
+            background: #a32035;
+            color: white;
+            border-color: #a32035;
+        }
+
+        .actor-section {
+            display: none;
+        }
+
+        .actor-section.active {
+            display: block;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .content-column {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .criteria-header {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid;
+        }
+
+        .criteria-header.higher {
+            color: #27ae60;
+            border-bottom-color: #27ae60;
+        }
+
+        .criteria-header.lower {
+            color: #e74c3c;
+            border-bottom-color: #e74c3c;
+        }
+
+        .summary-section {
+            margin-bottom: 20px;
+        }
+
+        .summary-text {
+            margin-bottom: 15px;
+            font-weight: 500;
+            color: #444;
+        }
+
+        .quote-details {
+            margin-top: 15px;
+        }
+
+        .quote-toggle {
+            cursor: pointer;
+            color: #a32035;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 8px 0;
+            border-bottom: 1px dotted #a32035;
+            display: inline-block;
+        }
+
+        .quote-toggle:hover {
+            color: #8a1c2e;
+        }
+
+        .quote-list {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .quote-list li {
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .nav-pills {
+                justify-content: flex-start;
+            }
+
+            .nav-pill {
+                font-size: 12px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>6.2 Increased inequality and decline in employment quality - Required Actors Responsibility Assessment</h1>
+
+        <div class="nav-pills">
+            
+            <button class="nav-pill active" data-target="AIDeveloperGeneralpurposeAI">
+                AI Developer (General-purpose AI)
+            </button>
+            <button class="nav-pill " data-target="AIDeployer">
+                AI Deployer
+            </button>
+            <button class="nav-pill " data-target="AIGovernanceActor">
+                AI Governance Actor
+            </button>
+            <button class="nav-pill " data-target="AIUser">
+                AI User
+            </button>
+        </div>
+
+        <div class="content-sections">
+            
+            <div class="actor-section active" id="AIDeveloperGeneralpurposeAI">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments emphasized GPAI developers share primary responsibility with governance actors for establishing baseline conditions, with some noting specific obligations like OpenAI's charter and Anthropic's public benefit structure requiring them to help those made obsolete.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (4)</summary>
+                <ul class="quote-list">
+                    <li>"Primary responsibility falls on general-purpose AI developers and governance actors since they establish the baseline conditions under which employment inequality emerges or is mitigated."</li><li>"Generally governance actors and foundational model developers have the most influence and governance actors have the most societal responsibility since it's kind of their whole job. I don't think someone inventing a factory for cheap high-quality shirts is necessarily responsibly for seamstresses going out of work but I do think policymakers are responsible for managing this transition."</li><li>"OpenAI in particular had a non-profit charter and later specific mechanisms like the capped profit structure above which profits were meant to benefit the rest of the world. Arguably their own charter declares their responsibility to help out here."</li><li>"Did not indicate primarily responsible as responsibilities should be shared: developers in best position to do initial risk identification and assessment developers and deployers for risk mitigation through staged deployment and monitoring governance actors for risk mitigation through e.g. income redistribution."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">No comments provided.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIDeployer">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments consistently emphasized deployers' high responsibility through business strategies determining augmentation versus displacement, with obligations for adequate communication, AI training, reskilling, and understanding societal implications.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (4)</summary>
+                <ul class="quote-list">
+                    <li>"Deployers share high responsibility because their business strategies determine whether AI augments or displaces workers."</li><li>"It is for the employing organization to provide adequate communication AI training and reskilling to employees; additionally the employing organization should understand the societal context and implications of the AI System's deployment."</li><li>"Entities that design deploy or financially benefit from AI systems contributing to job automation or degraded work conditions should bear direct responsibility. Their position within the ecosystem gives them both the capability and obligation to mitigate negative labor impacts."</li><li>"Did not indicate primarily responsible as responsibilities should be shared: developers in best position to do initial risk identification and assessment developers and deployers for risk mitigation through staged deployment and monitoring governance actors for risk mitigation through e.g. income redistribution."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">No comments provided.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIGovernanceActor">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments overwhelmingly emphasized governance actors' primary responsibility through their societal obligation to manage transitions, implement redistribution mechanisms like UBI, and incentivize productivity metrics beyond GDP.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (6)</summary>
+                <ul class="quote-list">
+                    <li>"I believe regulators should incentivize builders and deployers of AI solutions to add productivity defined by a new metric that takes into account variables such as quality of life index employment cost of living rather than just GDP."</li><li>"Primary responsibility falls on general-purpose AI developers and governance actors since they establish the baseline conditions under which employment inequality emerges or is mitigated."</li><li>"Generally governance actors and foundational model developers have the most influence and governance actors have the most societal responsibility since it's kind of their whole job."</li><li>"Rather than try to prevent decline of employment AI governance actors should probably be finding ways to adjust/mitigate - e.g. plan for a functional world where there simply is less employment."</li><li>"Did not indicate primarily responsible as responsibilities should be shared: developers in best position to do initial risk identification and assessment developers and deployers for risk mitigation through staged deployment and monitoring governance actors for risk mitigation through e.g. income redistribution."</li><li>"The government is needed to impose taxes to implement a UBI system from profits from developers like Google DeepMind that don't have a legal structure allowing them to be altruistic without being sued by shareholders."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">No comments provided.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIUser">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">One commenter said: "Users fighting against tech that negatively impacts their lives like making obsolete their jobs are likely about as effective as carriage drivers railing against the automobile but the awareness created by having the discussion is important. Ultimately we must all collectively decide if we want to live in an age of technology that disproportionately benefits a small group of technocrats at the expense of the many."</p>
+                            
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Most comments characterized users as having limited responsibility and effectiveness in driving change, with influence mainly driven by legislation rather than user action, though collective pressure can shape governance.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (3)</summary>
+                <ul class="quote-list">
+                    <li>"end-users and affected stakeholders have limited direct responsibility though their collective pressure can shape governance and corporate accountability."</li><li>"I just don't see users as effective in driving change here. The impetus for change is likely driven by legislation and industry regulation."</li><li>"AI users will likely have limited causal influence on this phenomena as its integration and acceleration will mainly be driven by people in higher positions of power and by those who financially benefit from this phenomena."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const pills = document.querySelectorAll('.nav-pill');
+            const sections = document.querySelectorAll('.actor-section');
+
+            pills.forEach(pill => {
+                pill.addEventListener('click', function() {
+                    // Remove active class from all pills and sections
+                    pills.forEach(p => p.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+
+                    // Add active class to clicked pill
+                    this.classList.add('active');
+
+                    // Show corresponding section
+                    const targetId = this.getAttribute('data-target');
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

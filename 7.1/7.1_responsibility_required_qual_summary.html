@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.1 AI pursuing its own goals in conflict with human goals or values - Required Actors Responsibility Assessment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #a32035;
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        .nav-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .nav-pill {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 25px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'Figtree', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            color: #555;
+        }
+
+        .nav-pill:hover {
+            background: #e9ecef;
+            border-color: #a32035;
+        }
+
+        .nav-pill.active {
+            background: #a32035;
+            color: white;
+            border-color: #a32035;
+        }
+
+        .actor-section {
+            display: none;
+        }
+
+        .actor-section.active {
+            display: block;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .content-column {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .criteria-header {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid;
+        }
+
+        .criteria-header.higher {
+            color: #27ae60;
+            border-bottom-color: #27ae60;
+        }
+
+        .criteria-header.lower {
+            color: #e74c3c;
+            border-bottom-color: #e74c3c;
+        }
+
+        .summary-section {
+            margin-bottom: 20px;
+        }
+
+        .summary-text {
+            margin-bottom: 15px;
+            font-weight: 500;
+            color: #444;
+        }
+
+        .quote-details {
+            margin-top: 15px;
+        }
+
+        .quote-toggle {
+            cursor: pointer;
+            color: #a32035;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 8px 0;
+            border-bottom: 1px dotted #a32035;
+            display: inline-block;
+        }
+
+        .quote-toggle:hover {
+            color: #8a1c2e;
+        }
+
+        .quote-list {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .quote-list li {
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .nav-pills {
+                justify-content: flex-start;
+            }
+
+            .nav-pill {
+                font-size: 12px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>7.1 AI pursuing its own goals in conflict with human goals or values - Required Actors Responsibility Assessment</h1>
+
+        <div class="nav-pills">
+            
+            <button class="nav-pill active" data-target="AIDeveloperGeneralpurposeAI">
+                AI Developer (General-purpose AI)
+            </button>
+            <button class="nav-pill " data-target="AIDeployer">
+                AI Deployer
+            </button>
+            <button class="nav-pill " data-target="AIGovernanceActor">
+                AI Governance Actor
+            </button>
+            <button class="nav-pill " data-target="AIUser">
+                AI User
+            </button>
+        </div>
+
+        <div class="content-sections">
+            
+            <div class="actor-section active" id="AIDeveloperGeneralpurposeAI">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments overwhelmingly emphasized GPAI developers' primary responsibility as they design core architectures and foundational models that set reliability standards across applications. Multiple responses noted robustness must be embedded from the start, not patched downstream.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (8)</summary>
+                <ul class="quote-list">
+                    <li>"The highest responsibility lies with AI developers (both general-purpose and specialized) since design choices directly determine whether misaligned behaviors can emerge."</li><li>"Here model creators and deployers are more responsible because it directly pertains to product-relevant/mission-critical safety anyway."</li><li>"I believe responsibility for this risk sits primarily with the developers and governance sector who need to compel developers to ensure effective safeguards are in place or if not then the AI systems are not deployed."</li><li>"Oversight is a core responsibility and liability of model providers. Notably the taxonomy does not state model providers optimizing for their own goals - even though the current information asymmetry does not allow third parties to evaluate for model providers influence."</li><li>"Unlike other risks that stem from human misuse goal misalignment is fundamentally a technical problem requiring specialized expertise to solve. Once misalignment occurs and AI systems become adversarial correction may be extremely difficult or impossible; hence the responsibility primarily lies with preventing the problem during the development phase. The technical capability to address alignment is concentrated among developers of advanced AI systems."</li><li>"Model creators must beware their creations do not subvert containment."</li><li>"Only developers have reasonable capability to intervene on this while only governments have a strong obligation to do so on the behalf of their citizens. Individual users deployers etc. are not in the causal chain except in their capacity as constituents of the relevant government."</li><li>"My main risk driver here is system designers who configure a GPAI or RL based based system for a certain purpose being too careless about ensuring good alignment with broader society because they are in a hurry or because they do not care that much about externalities or human values in the first place."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">One commenter said: "To justify my choice for developers of gneral AI models I would like to add that Elon Musk recently complained his model was too woke implying that even the creators of these models do not have as much control as they would like over the LLMs behaviour ethics and morals in whichever way the developer of such model defines this."</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIDeployer">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Multiple comments emphasized deployers' high responsibility for vetting use cases, stress-testing in real contexts, and understanding model limitations before deployment. Several noted deployers are the final party making promises about technological performance.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (4)</summary>
+                <ul class="quote-list">
+                    <li>"Here model creators and deployers are more responsible because it directly pertains to product-relevant/mission-critical safety anyway."</li><li>"Deployers and governance actors are also highly responsible for context-specific risk controls and oversight frameworks."</li><li>"Deployers and infrastructure providers must secure their systems. (Deployer/provider) governance of actions allowed is critical and safeguards must be in place to prevent unwanted actions. Detection and response and constant monitoring of AI behavior are also incumbent upon the deployers and providers."</li><li>"The responsibilities here fall most heavily on deployers somewhat on infra providers (both of whom can prevent runaway failures with proper segmentation and system runtime behavioral anomaly detection and response)."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">No comments provided.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIGovernanceActor">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments emphasized governance actors' high responsibility for enforcing regulatory frameworks, certification processes, and increasing AI literacy to help users identify appropriate use circumstances.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (5)</summary>
+                <ul class="quote-list">
+                    <li>"Deployers and governance actors are also highly responsible for context-specific risk controls and oversight frameworks."</li><li>"I believe responsibility for this risk sits primarily with the developers and governance sector who need to compel developers to ensure effective safeguards are in place or if not then the AI systems are not deployed."</li><li>"Misaligned AI causing great harm represents a fundamental failure of the national security state meaning AI governance actors are responsible for preventing this great harm."</li><li>"Some responsibility for AI Governance actors due to their lack of reaction to AI developers lobbying"</li><li>"Only developers have reasonable capability to intervene on this while only governments have a strong obligation to do so on the behalf of their citizens."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">No comments provided.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIUser">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">One commenter said: "Users are responsible for securing system use governing who can instruct AI for what use cases - having the clearly desired outcomes articulated as well as modalities of task failure remains in the users' hands."</p>
+                            
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments varied widely, with most characterizing users as minimally responsible with limited control over design and deployment, while some noted moderate to higher responsibility for flagging failures and avoiding overreliance in critical applications.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (2)</summary>
+                <ul class="quote-list">
+                    <li>"Users and affected stakeholders should not be burdened with responsibility though they are the most vulnerable in misalignment scenarios."</li><li>"Individual users deployers etc. are not in the causal chain except in their capacity as constituents of the relevant government."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const pills = document.querySelectorAll('.nav-pill');
+            const sections = document.querySelectorAll('.actor-section');
+
+            pills.forEach(pill => {
+                pill.addEventListener('click', function() {
+                    // Remove active class from all pills and sections
+                    pills.forEach(p => p.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+
+                    // Add active class to clicked pill
+                    this.classList.add('active');
+
+                    // Show corresponding section
+                    const targetId = this.getAttribute('data-target');
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

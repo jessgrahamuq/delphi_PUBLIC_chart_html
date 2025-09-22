@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.3 Lack of capability or robustness - Required Actors Responsibility Assessment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #a32035;
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        .nav-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .nav-pill {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 25px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'Figtree', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            color: #555;
+        }
+
+        .nav-pill:hover {
+            background: #e9ecef;
+            border-color: #a32035;
+        }
+
+        .nav-pill.active {
+            background: #a32035;
+            color: white;
+            border-color: #a32035;
+        }
+
+        .actor-section {
+            display: none;
+        }
+
+        .actor-section.active {
+            display: block;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .content-column {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .criteria-header {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid;
+        }
+
+        .criteria-header.higher {
+            color: #27ae60;
+            border-bottom-color: #27ae60;
+        }
+
+        .criteria-header.lower {
+            color: #e74c3c;
+            border-bottom-color: #e74c3c;
+        }
+
+        .summary-section {
+            margin-bottom: 20px;
+        }
+
+        .summary-text {
+            margin-bottom: 15px;
+            font-weight: 500;
+            color: #444;
+        }
+
+        .quote-details {
+            margin-top: 15px;
+        }
+
+        .quote-toggle {
+            cursor: pointer;
+            color: #a32035;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 8px 0;
+            border-bottom: 1px dotted #a32035;
+            display: inline-block;
+        }
+
+        .quote-toggle:hover {
+            color: #8a1c2e;
+        }
+
+        .quote-list {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .quote-list li {
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .nav-pills {
+                justify-content: flex-start;
+            }
+
+            .nav-pill {
+                font-size: 12px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>7.3 Lack of capability or robustness - Required Actors Responsibility Assessment</h1>
+
+        <div class="nav-pills">
+            
+            <button class="nav-pill active" data-target="AIDeveloperGeneralpurposeAI">
+                AI Developer (General-purpose AI)
+            </button>
+            <button class="nav-pill " data-target="AIDeployer">
+                AI Deployer
+            </button>
+            <button class="nav-pill " data-target="AIGovernanceActor">
+                AI Governance Actor
+            </button>
+            <button class="nav-pill " data-target="AIUser">
+                AI User
+            </button>
+        </div>
+
+        <div class="content-sections">
+            
+            <div class="actor-section active" id="AIDeveloperGeneralpurposeAI">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments overwhelmingly emphasized GPAI developers' primary responsibility as they design core architectures influencing robustness across applications, with robustness needing to be designed at model level not just patched downstream. Multiple responses noted developers carry most responsibility as their foundational work sets the tone for system reliability, with failures cascading across sectors if robustness isn't embedded from the start. Comments stressed developers are the main party capable of ensuring efficacy, with it being their job to maximize robustness.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (7)</summary>
+                <ul class="quote-list">
+                    <li>"General-purpose AI developers are primarily responsible because they design the core architectures that influence robustness across applications."</li><li>"General-purpose AI Developers are primarily responsible because robustness must be designed at the model level, not just patched downstream. These models form the foundation and are expected to operate under varied, unpredictable conditions."</li><li>"AI Developer (General-purpose AI): Their foundational work sets the tone for system reliability. If robustness is not embedded from the start, downstream actors face limitations."</li><li>"AI Developer (General-purpose AI) - Primarily responsible - Developers of large, foundational models carry the most responsibility, as their systems are widely adopted and failures in robustness can cascade across multiple sectors."</li><li>"The AI developer is the main party capable of ensuring the efficacy here (whether specialized or general), while the AI deployer is the one responsible."</li><li>"I imagine users often not being able to know (practically speaking) what metrics their situation is being subject to for a decision. Conventional ML robustness should just be a standard check for any ML deployer, GPAI developer or not."</li><li>"Generally I rate Developers, Deployers and Infra high here because it actually is their job to maximise robustness."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">No comments provided.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIDeployer">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments unanimously emphasized deployers' high responsibility for evaluating reliability in real-world contexts, vetting use cases, stress-testing, and ensuring systems are robust and appropriate for applications. Multiple responses noted deployers are the last party making promises about technological performance, bearing primary responsibility for understanding foundation models they provide to users. However, some noted deployers may lack capability especially as non-tech organizations implement external services without technical know-how to assess or modify them.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (7)</summary>
+                <ul class="quote-list">
+                    <li>"Deployers are highly responsible as they must evaluate the reliability of AI systems in real-world contexts and mitigate risks through testing and monitoring."</li><li>"AI Deployers and Governance Actors are highly responsible for vetting use cases, stress-testing in real contexts, and setting clear policies. Deployment without robustness checks is reckless."</li><li>"AI Deployer: They must understand the limitations of the AI and ensure it is not used in contexts where it may fail."</li><li>"AI Deployer - Highly responsible - Those who introduce AI into real-world use are responsible for ensuring the systems they adopt are robust, adequately tested, and appropriate for the application."</li><li>"AI deployers are the last/final party making promises about technological performance. It's primarily their responsibility to understand the foundation model they are providing in a direct or translational capacity to end users. This should include frontier labs deploying straight to users."</li><li>"The AI developer is the main party capable of ensuring the efficacy here (whether specialized or general), while the AI deployer is the one responsible."</li><li>"Generally I rate Developers, Deployers and Infra high here because it actually is their job to maximise robustness."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Two experts provided varied perspectives on multi-agent risks.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (2)</summary>
+                <ul class="quote-list">
+                    <li>"I rate the 'AI deployer's responsibility as high. This is because while they do have an obligation, in certain contexts they may lack the capability, especially as more and more non-tech organizations implement external AI services into their own systems while lacking the technical know-how and sometimes even the ability to assess and modify the used services"</li><li>"Moderate responsibility for AI users and AI deployers, because they should ensure that the AI system they use is designed for the use they make of it, and get as informed as possible on its capabilities."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIGovernanceActor">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments consistently emphasized governance actors' high to primary responsibility for enforcing regulatory frameworks, certification processes, and creating testing and monitoring frameworks to hold developers accountable. Multiple responses noted their duty to increase AI literacy helping users identify appropriate circumstances for AI performance, with frameworks able to incentivize or mandate robustness practices. Comments stressed robustness requires coordination between builders, implementers, and regulators.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (6)</summary>
+                <ul class="quote-list">
+                    <li>"Governance actors share primary responsibility since they must enforce regulatory frameworks and certification processes."</li><li>"High responsibility for AI governance actors: as part of their duty to increase AI literacy so that AI users can better identify the circumstances where the AI system will perform in a satisfactory way."</li><li>"AI Deployers and Governance Actors are highly responsible for vetting use cases, stress-testing in real contexts, and setting clear policies."</li><li>"AI Governance Actor: While they don't build or deploy, their frameworks can incentivize or mandate robustness practices."</li><li>"AI Governance Actor - Highly responsible - Regulators and oversight bodies must ensure testing, certification, and monitoring frameworks exist to hold developers and deployers accountable."</li><li>"Robustness requires coordination between builders (developers), implementers (deployers), and regulators (governance)."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">No comments provided.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIUser">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> 3 experts provided assessments spanning different risk dimensions and responsibility levels.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (3)</summary>
+                <ul class="quote-list">
+                    <li>"Moderate responsibility for AI users and AI deployers, because they should ensure that the AI system they use is designed for the use they make of it, and get as informed as possible on its capabilities."</li><li>"AI Users share moderate responsibility ‚ especially in critical applications ‚ as they must flag unexpected failures and avoid overreliance when moral reasoning is required."</li><li>"Responsibility here will vary by domain and use case. A user will have higher responsibility for noticing errors on an email drafted on their behalf than in medical advice given to them as a non-expert."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments varied widely on user responsibility, with most characterizing users as minimally to moderately responsible, primarily following guidelines and reporting failures rather than ensuring systemic robustness. However, some noted users share moderate responsibility especially in critical applications for flagging failures and avoiding overreliance, with responsibility varying by domain - higher for noticing errors in emails than medical advice. Comments emphasized non-expert users often cannot assess robustness, placing higher burden on technical actors.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (3)</summary>
+                <ul class="quote-list">
+                    <li>"Users, on the other hand, are only moderately responsible, as their role primarily concerns following guidelines and reporting failures rather than ensuring systemic robustness"</li><li>"AI User - Minimally responsible - End users influence demand and may misuse systems, but they lack meaningful control over robustness at the design and deployment stages."</li><li>"Non-expert users often cannot assess robustness, placing a higher burden on technical actors to communicate limitations clearly."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const pills = document.querySelectorAll('.nav-pill');
+            const sections = document.querySelectorAll('.actor-section');
+
+            pills.forEach(pill => {
+                pill.addEventListener('click', function() {
+                    // Remove active class from all pills and sections
+                    pills.forEach(p => p.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+
+                    // Add active class to clicked pill
+                    this.classList.add('active');
+
+                    // Show corresponding section
+                    const targetId = this.getAttribute('data-target');
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

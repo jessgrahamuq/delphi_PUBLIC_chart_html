@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Risk Assessment Visualization Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #a32035;
+            font-weight: 700;
+            font-size: 36px;
+        }
+
+        .subtitle {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #666;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        .risk-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .risk-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .risk-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            border-color: #a32035;
+        }
+
+        .risk-header {
+            margin-bottom: 16px;
+        }
+
+        .risk-code {
+            font-size: 20px;
+            font-weight: 700;
+            color: #a32035;
+            margin-bottom: 8px;
+        }
+
+        .risk-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .visualization-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .link-section {
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .viz-link {
+            display: block;
+            padding: 8px 12px;
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #555;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            margin-bottom: 6px;
+        }
+
+        .viz-link:hover {
+            background: #a32035;
+            color: white;
+            border-color: #a32035;
+        }
+
+        .viz-link:last-child {
+            margin-bottom: 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 40px 20px;
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .footer p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .footer .highlight {
+            color: #a32035;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .risk-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .visualization-links {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Risk Assessment Visualization Dashboard</h1>
+        <p class="subtitle">Interactive expert assessments of actor responsibility and vulnerability across AI risk categories</p>
+
+        <div class="risk-grid">
+            <!-- 1.1 Unfair discrimination and misrepresentation -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <div class="risk-code">1.1</div>
+                    <div class="risk-title">Unfair discrimination and misrepresentation</div>
+                </div>
+                <div class="visualization-links">
+                    <div class="link-section">
+                        <div class="section-title">Responsibility</div>
+                        <a href="1.1/1.1_responsibility_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="1.1/1.1_responsibility_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                    </div>
+                    <div class="link-section">
+                        <div class="section-title">Vulnerability</div>
+                        <a href="1.1/1.1_vulnerability_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="1.1/1.1_vulnerability_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                        <a href="1.1/1.1_sectors_vulnerability_qual_summary.html" class="viz-link">Sectors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 1.2 Exposure to toxic content -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <div class="risk-code">1.2</div>
+                    <div class="risk-title">Exposure to toxic content</div>
+                </div>
+                <div class="visualization-links">
+                    <div class="link-section">
+                        <div class="section-title">Responsibility</div>
+                        <a href="1.2/1.2_responsibility_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="1.2/1.2_responsibility_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                    </div>
+                    <div class="link-section">
+                        <div class="section-title">Vulnerability</div>
+                        <a href="1.2/1.2_vulnerability_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="1.2/1.2_vulnerability_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                        <a href="1.2/1.2_sectors_vulnerability_qual_summary.html" class="viz-link">Sectors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 1.3 Unequal performance across groups -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <div class="risk-code">1.3</div>
+                    <div class="risk-title">Unequal performance across groups</div>
+                </div>
+                <div class="visualization-links">
+                    <div class="link-section">
+                        <div class="section-title">Responsibility</div>
+                        <a href="1.3/1.3_responsibility_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="1.3/1.3_responsibility_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                    </div>
+                    <div class="link-section">
+                        <div class="section-title">Vulnerability</div>
+                        <a href="1.3/1.3_vulnerability_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="1.3/1.3_vulnerability_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                        <a href="1.3/1.3_sectors_vulnerability_qual_summary.html" class="viz-link">Sectors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2.1 Compromise of privacy by obtaining, leaking or correctly inferring sensitive information -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <div class="risk-code">2.1</div>
+                    <div class="risk-title">Compromise of privacy by obtaining, leaking or correctly inferring sensitive information</div>
+                </div>
+                <div class="visualization-links">
+                    <div class="link-section">
+                        <div class="section-title">Responsibility</div>
+                        <a href="2.1/2.1_responsibility_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="2.1/2.1_responsibility_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                    </div>
+                    <div class="link-section">
+                        <div class="section-title">Vulnerability</div>
+                        <a href="2.1/2.1_vulnerability_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="2.1/2.1_vulnerability_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                        <a href="2.1/2.1_sectors_vulnerability_qual_summary.html" class="viz-link">Sectors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2.2 AI system security vulnerabilities and attacks -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <div class="risk-code">2.2</div>
+                    <div class="risk-title">AI system security vulnerabilities and attacks</div>
+                </div>
+                <div class="visualization-links">
+                    <div class="link-section">
+                        <div class="section-title">Responsibility</div>
+                        <a href="2.2/2.2_responsibility_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="2.2/2.2_responsibility_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                    </div>
+                    <div class="link-section">
+                        <div class="section-title">Vulnerability</div>
+                        <a href="2.2/2.2_vulnerability_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="2.2/2.2_vulnerability_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                        <a href="2.2/2.2_sectors_vulnerability_qual_summary.html" class="viz-link">Sectors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3.1 False or misleading information -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <div class="risk-code">3.1</div>
+                    <div class="risk-title">False or misleading information</div>
+                </div>
+                <div class="visualization-links">
+                    <div class="link-section">
+                        <div class="section-title">Responsibility</div>
+                        <a href="3.1/3.1_responsibility_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="3.1/3.1_responsibility_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                    </div>
+                    <div class="link-section">
+                        <div class="section-title">Vulnerability</div>
+                        <a href="3.1/3.1_vulnerability_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="3.1/3.1_vulnerability_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                        <a href="3.1/3.1_sectors_vulnerability_qual_summary.html" class="viz-link">Sectors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3.2 Pollution of information ecosystem and loss of consensus reality -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <div class="risk-code">3.2</div>
+                    <div class="risk-title">Pollution of information ecosystem and loss of consensus reality</div>
+                </div>
+                <div class="visualization-links">
+                    <div class="link-section">
+                        <div class="section-title">Responsibility</div>
+                        <a href="3.2/3.2_responsibility_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="3.2/3.2_responsibility_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                    </div>
+                    <div class="link-section">
+                        <div class="section-title">Vulnerability</div>
+                        <a href="3.2/3.2_vulnerability_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="3.2/3.2_vulnerability_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                        <a href="3.2/3.2_sectors_vulnerability_qual_summary.html" class="viz-link">Sectors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4.1 Disinformation, surveillance, and influence at scale -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <div class="risk-code">4.1</div>
+                    <div class="risk-title">Disinformation, surveillance, and influence at scale</div>
+                </div>
+                <div class="visualization-links">
+                    <div class="link-section">
+                        <div class="section-title">Responsibility</div>
+                        <a href="4.1/4.1_responsibility_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="4.1/4.1_responsibility_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                    </div>
+                    <div class="link-section">
+                        <div class="section-title">Vulnerability</div>
+                        <a href="4.1/4.1_vulnerability_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="4.1/4.1_vulnerability_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                        <a href="4.1/4.1_sectors_vulnerability_qual_summary.html" class="viz-link">Sectors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4.2 Cyberattacks, weapon development or use, and mass harm -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <div class="risk-code">4.2</div>
+                    <div class="risk-title">Cyberattacks, weapon development or use, and mass harm</div>
+                </div>
+                <div class="visualization-links">
+                    <div class="link-section">
+                        <div class="section-title">Responsibility</div>
+                        <a href="4.2/4.2_responsibility_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="4.2/4.2_responsibility_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                    </div>
+                    <div class="link-section">
+                        <div class="section-title">Vulnerability</div>
+                        <a href="4.2/4.2_vulnerability_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="4.2/4.2_vulnerability_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                        <a href="4.2/4.2_sectors_vulnerability_qual_summary.html" class="viz-link">Sectors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4.3 Fraud, scams, and targeted manipulation -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <div class="risk-code">4.3</div>
+                    <div class="risk-title">Fraud, scams, and targeted manipulation</div>
+                </div>
+                <div class="visualization-links">
+                    <div class="link-section">
+                        <div class="section-title">Responsibility</div>
+                        <a href="4.3/4.3_responsibility_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="4.3/4.3_responsibility_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                    </div>
+                    <div class="link-section">
+                        <div class="section-title">Vulnerability</div>
+                        <a href="4.3/4.3_vulnerability_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="4.3/4.3_vulnerability_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                        <a href="4.3/4.3_sectors_vulnerability_qual_summary.html" class="viz-link">Sectors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5.1 Overreliance and unsafe use -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <div class="risk-code">5.1</div>
+                    <div class="risk-title">Overreliance and unsafe use</div>
+                </div>
+                <div class="visualization-links">
+                    <div class="link-section">
+                        <div class="section-title">Responsibility</div>
+                        <a href="5.1/5.1_responsibility_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="5.1/5.1_responsibility_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                    </div>
+                    <div class="link-section">
+                        <div class="section-title">Vulnerability</div>
+                        <a href="5.1/5.1_vulnerability_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="5.1/5.1_vulnerability_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                        <a href="5.1/5.1_sectors_vulnerability_qual_summary.html" class="viz-link">Sectors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5.2 Loss of human agency and autonomy -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <div class="risk-code">5.2</div>
+                    <div class="risk-title">Loss of human agency and autonomy</div>
+                </div>
+                <div class="visualization-links">
+                    <div class="link-section">
+                        <div class="section-title">Responsibility</div>
+                        <a href="5.2/5.2_responsibility_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="5.2/5.2_responsibility_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                    </div>
+                    <div class="link-section">
+                        <div class="section-title">Vulnerability</div>
+                        <a href="5.2/5.2_vulnerability_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="5.2/5.2_vulnerability_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                        <a href="5.2/5.2_sectors_vulnerability_qual_summary.html" class="viz-link">Sectors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6.1 Power centralization and unfair distribution of benefits -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <div class="risk-code">6.1</div>
+                    <div class="risk-title">Power centralization and unfair distribution of benefits</div>
+                </div>
+                <div class="visualization-links">
+                    <div class="link-section">
+                        <div class="section-title">Responsibility</div>
+                        <a href="6.1/6.1_responsibility_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="6.1/6.1_responsibility_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                    </div>
+                    <div class="link-section">
+                        <div class="section-title">Vulnerability</div>
+                        <a href="6.1/6.1_vulnerability_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="6.1/6.1_vulnerability_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                        <a href="6.1/6.1_sectors_vulnerability_qual_summary.html" class="viz-link">Sectors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6.2 Increased inequality and decline in employment quality -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <div class="risk-code">6.2</div>
+                    <div class="risk-title">Increased inequality and decline in employment quality</div>
+                </div>
+                <div class="visualization-links">
+                    <div class="link-section">
+                        <div class="section-title">Responsibility</div>
+                        <a href="6.2/6.2_responsibility_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="6.2/6.2_responsibility_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                    </div>
+                    <div class="link-section">
+                        <div class="section-title">Vulnerability</div>
+                        <a href="6.2/6.2_vulnerability_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="6.2/6.2_vulnerability_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                        <a href="6.2/6.2_sectors_vulnerability_qual_summary.html" class="viz-link">Sectors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6.3 Economic and cultural devaluation of human effort -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <div class="risk-code">6.3</div>
+                    <div class="risk-title">Economic and cultural devaluation of human effort</div>
+                </div>
+                <div class="visualization-links">
+                    <div class="link-section">
+                        <div class="section-title">Responsibility</div>
+                        <a href="6.3/6.3_responsibility_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="6.3/6.3_responsibility_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                    </div>
+                    <div class="link-section">
+                        <div class="section-title">Vulnerability</div>
+                        <a href="6.3/6.3_vulnerability_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="6.3/6.3_vulnerability_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                        <a href="6.3/6.3_sectors_vulnerability_qual_summary.html" class="viz-link">Sectors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6.4 Competitive dynamics -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <div class="risk-code">6.4</div>
+                    <div class="risk-title">Competitive dynamics</div>
+                </div>
+                <div class="visualization-links">
+                    <div class="link-section">
+                        <div class="section-title">Responsibility</div>
+                        <a href="6.4/6.4_responsibility_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="6.4/6.4_responsibility_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                    </div>
+                    <div class="link-section">
+                        <div class="section-title">Vulnerability</div>
+                        <a href="6.4/6.4_vulnerability_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="6.4/6.4_vulnerability_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                        <a href="6.4/6.4_sectors_vulnerability_qual_summary.html" class="viz-link">Sectors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6.5 Governance failure -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <div class="risk-code">6.5</div>
+                    <div class="risk-title">Governance failure</div>
+                </div>
+                <div class="visualization-links">
+                    <div class="link-section">
+                        <div class="section-title">Responsibility</div>
+                        <a href="6.5/6.5_responsibility_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="6.5/6.5_responsibility_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                    </div>
+                    <div class="link-section">
+                        <div class="section-title">Vulnerability</div>
+                        <a href="6.5/6.5_vulnerability_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="6.5/6.5_vulnerability_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                        <a href="6.5/6.5_sectors_vulnerability_qual_summary.html" class="viz-link">Sectors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6.6 Environmental harm -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <div class="risk-code">6.6</div>
+                    <div class="risk-title">Environmental harm</div>
+                </div>
+                <div class="visualization-links">
+                    <div class="link-section">
+                        <div class="section-title">Responsibility</div>
+                        <a href="6.6/6.6_responsibility_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="6.6/6.6_responsibility_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                    </div>
+                    <div class="link-section">
+                        <div class="section-title">Vulnerability</div>
+                        <a href="6.6/6.6_vulnerability_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="6.6/6.6_vulnerability_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                        <a href="6.6/6.6_sectors_vulnerability_qual_summary.html" class="viz-link">Sectors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7.1 AI pursuing its own goals in conflict with human goals or values -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <div class="risk-code">7.1</div>
+                    <div class="risk-title">AI pursuing its own goals in conflict with human goals or values</div>
+                </div>
+                <div class="visualization-links">
+                    <div class="link-section">
+                        <div class="section-title">Responsibility</div>
+                        <a href="7.1/7.1_responsibility_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="7.1/7.1_responsibility_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                    </div>
+                    <div class="link-section">
+                        <div class="section-title">Vulnerability</div>
+                        <a href="7.1/7.1_vulnerability_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="7.1/7.1_vulnerability_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                        <a href="7.1/7.1_sectors_vulnerability_qual_summary.html" class="viz-link">Sectors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7.2 AI possessing dangerous capabilities -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <div class="risk-code">7.2</div>
+                    <div class="risk-title">AI possessing dangerous capabilities</div>
+                </div>
+                <div class="visualization-links">
+                    <div class="link-section">
+                        <div class="section-title">Responsibility</div>
+                        <a href="7.2/7.2_responsibility_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="7.2/7.2_responsibility_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                    </div>
+                    <div class="link-section">
+                        <div class="section-title">Vulnerability</div>
+                        <a href="7.2/7.2_vulnerability_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="7.2/7.2_vulnerability_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                        <a href="7.2/7.2_sectors_vulnerability_qual_summary.html" class="viz-link">Sectors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7.3 Lack of capability or robustness -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <div class="risk-code">7.3</div>
+                    <div class="risk-title">Lack of capability or robustness</div>
+                </div>
+                <div class="visualization-links">
+                    <div class="link-section">
+                        <div class="section-title">Responsibility</div>
+                        <a href="7.3/7.3_responsibility_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="7.3/7.3_responsibility_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                    </div>
+                    <div class="link-section">
+                        <div class="section-title">Vulnerability</div>
+                        <a href="7.3/7.3_vulnerability_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="7.3/7.3_vulnerability_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                        <a href="7.3/7.3_sectors_vulnerability_qual_summary.html" class="viz-link">Sectors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7.4 Lack of transparency or interpretability -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <div class="risk-code">7.4</div>
+                    <div class="risk-title">Lack of transparency or interpretability</div>
+                </div>
+                <div class="visualization-links">
+                    <div class="link-section">
+                        <div class="section-title">Responsibility</div>
+                        <a href="7.4/7.4_responsibility_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="7.4/7.4_responsibility_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                    </div>
+                    <div class="link-section">
+                        <div class="section-title">Vulnerability</div>
+                        <a href="7.4/7.4_vulnerability_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="7.4/7.4_vulnerability_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                        <a href="7.4/7.4_sectors_vulnerability_qual_summary.html" class="viz-link">Sectors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7.5 AI welfare and rights -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <div class="risk-code">7.5</div>
+                    <div class="risk-title">AI welfare and rights</div>
+                </div>
+                <div class="visualization-links">
+                    <div class="link-section">
+                        <div class="section-title">Responsibility</div>
+                        <a href="7.5/7.5_responsibility_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="7.5/7.5_responsibility_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                    </div>
+                    <div class="link-section">
+                        <div class="section-title">Vulnerability</div>
+                        <a href="7.5/7.5_vulnerability_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="7.5/7.5_vulnerability_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                        <a href="7.5/7.5_sectors_vulnerability_qual_summary.html" class="viz-link">Sectors</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7.6 Multi-agent risks -->
+            <div class="risk-card">
+                <div class="risk-header">
+                    <div class="risk-code">7.6</div>
+                    <div class="risk-title">Multi-agent risks</div>
+                </div>
+                <div class="visualization-links">
+                    <div class="link-section">
+                        <div class="section-title">Responsibility</div>
+                        <a href="7.6/7.6_responsibility_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="7.6/7.6_responsibility_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                    </div>
+                    <div class="link-section">
+                        <div class="section-title">Vulnerability</div>
+                        <a href="7.6/7.6_vulnerability_required_qual_summary.html" class="viz-link">Required Actors</a>
+                        <a href="7.6/7.6_vulnerability_optional_qual_summary.html" class="viz-link">Optional Actors</a>
+                        <a href="7.6/7.6_sectors_vulnerability_qual_summary.html" class="viz-link">Sectors</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><span class="highlight">AI Risk Assessment Visualization Dashboard</span></p>
+            <p>Interactive expert assessments covering 24 risk categories across responsibility and vulnerability dimensions</p>
+            <p>Each visualization includes expert quotes, summaries, and comparative analysis across actor types and sectors</p>
+        </div>
+    </div>
+</body>
+</html>
