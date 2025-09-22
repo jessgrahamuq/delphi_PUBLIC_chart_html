@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh repo view:*)",
+      "Bash(gh auth:*)",
+      "Bash(git clone:*)",
+      "Bash(python3:*)",
+      "Bash(bc)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
