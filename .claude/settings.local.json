@@ -8,7 +8,8 @@
       "Bash(bc)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(git submodule update:*)"
     ],
     "deny": [],
     "ask": []
