@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.2 AI system security vulnerabilities and attacks - Optional Actors Responsibility Assessment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #a32035;
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        .nav-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .nav-pill {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 25px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'Figtree', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            color: #555;
+        }
+
+        .nav-pill:hover {
+            background: #e9ecef;
+            border-color: #a32035;
+        }
+
+        .nav-pill.active {
+            background: #a32035;
+            color: white;
+            border-color: #a32035;
+        }
+
+        .actor-section {
+            display: none;
+        }
+
+        .actor-section.active {
+            display: block;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .content-column {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .criteria-header {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid;
+        }
+
+        .criteria-header.higher {
+            color: #27ae60;
+            border-bottom-color: #27ae60;
+        }
+
+        .criteria-header.lower {
+            color: #e74c3c;
+            border-bottom-color: #e74c3c;
+        }
+
+        .summary-section {
+            margin-bottom: 20px;
+        }
+
+        .summary-text {
+            margin-bottom: 15px;
+            font-weight: 500;
+            color: #444;
+        }
+
+        .quote-details {
+            margin-top: 15px;
+        }
+
+        .quote-toggle {
+            cursor: pointer;
+            color: #a32035;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 8px 0;
+            border-bottom: 1px dotted #a32035;
+            display: inline-block;
+        }
+
+        .quote-toggle:hover {
+            color: #8a1c2e;
+        }
+
+        .quote-list {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .quote-list li {
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .nav-pills {
+                justify-content: flex-start;
+            }
+
+            .nav-pill {
+                font-size: 12px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>2.2 AI system security vulnerabilities and attacks - Optional Actors Responsibility Assessment</h1>
+
+        <div class="nav-pills">
+            
+            <button class="nav-pill active" data-target="AIDeveloperSpecializedAI">
+                AI Developer (Specialized AI)
+            </button>
+            <button class="nav-pill " data-target="AIInfrastructureProvider">
+                AI Infrastructure Provider
+            </button>
+            <button class="nav-pill " data-target="AffectedStakeholder">
+                Affected Stakeholder
+            </button>
+        </div>
+
+        <div class="content-sections">
+            
+            <div class="actor-section active" id="AIDeveloperSpecializedAI">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments emphasized specialized developers' high to primary responsibility for operating systems in sensitive environments requiring robust safeguards. Multiple responses noted they have more responsibility than general-purpose developers due to smaller, more manageable vulnerability landscapes in domain-specific contexts like health and finance.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (4)</summary>
+                <ul class="quote-list">
+                    <li>"Specialized developers and deployers are highly responsible because they operate systems in sensitive environments and must implement robust protections."</li><li>"Deployers and specialized developers are highly responsible for secure integration and domain-specific protections."</li><li>"AI Developer (Specialized AI) - Fine-tuning for sensitive domains (e.g. health finance) requires robust safeguards."</li><li>"Developers of Specialized AI have more responsibility than developers of general-purpose AI because the landscape of vulnerabilities and attacks should be smaller in the former case."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">No comments provided.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIInfrastructureProvider">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments unanimously emphasized infrastructure providers' primary to high responsibility for determining security architectures, maintaining secure computing and storage infrastructure, with breaches cascading across multiple actors. Responses noted they play a critical but often overlooked role in securing environments where AI is built and run, with data brokers specifically providing training data where poisoned datasets create systemic vulnerabilities.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (9)</summary>
+                <ul class="quote-list">
+                    <li>"General-purpose developers infrastructure providers and governance actors are primarily responsible as they determine security architectures and enforce compliance."</li><li>"AI Developers (General-purpose) and Infrastructure Providers are primarily rated as responsible due to their obligation to implement secure-by-design principles."</li><li>"General-purpose developers and infrastructure providers carry primary responsibility as they design the foundational systems where vulnerabilities originate."</li><li>"AI Infrastructure Provider - Cloud compute and networking layers; breaches here cascade across multiple actors."</li><li>"Infrastructure Providers are often overlooked but play a critical role in securing the environments where AI is built and run."</li><li>"AI Infrastructure Provider - highly responsible to maintain secure computing and storage infrastructure"</li><li>"Primary responsibility lies with developers deployers and infrastructure providers as they design and control the conditions under which overreliance occurs."</li><li>"Data Brokers - Provide training/validation data; poisoned or low-quality datasets create systemic vulnerabilities."</li><li>"My responsibility assessments emphasize that accountability should rest with those who both control the infrastructure and set the standards."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">No comments provided.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AffectedStakeholder">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">One commenter said: "Affected stakeholders have to speak up and address outcomes that are not true from an AI model (for example: Copilot giving an answer by creating a totally new category in NIST)"</p>
+                            
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Most comments characterized affected stakeholders as bearing no responsibility as victims of security breaches with limited ability to prevent vulnerabilities. However, one comment noted stakeholders should speak up and address incorrect AI outputs, citing examples like Copilot creating nonexistent NIST categories.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (4)</summary>
+                <ul class="quote-list">
+                    <li>"Users and affected stakeholders cannot reasonably be held responsible as they lack the means to address system vulnerabilities."</li><li>"Affected Stakeholders bear no responsibility as they are victims of security breaches."</li><li>"Affected Stakeholder - Primarily recipients of risk; limited ability to prevent vulnerabilities."</li><li>"AI Users and Affected Stakeholders have limited or no responsibility as they do not control or influence system design or deployment."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const pills = document.querySelectorAll('.nav-pill');
+            const sections = document.querySelectorAll('.actor-section');
+
+            pills.forEach(pill => {
+                pill.addEventListener('click', function() {
+                    // Remove active class from all pills and sections
+                    pills.forEach(p => p.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+
+                    // Add active class to clicked pill
+                    this.classList.add('active');
+
+                    // Show corresponding section
+                    const targetId = this.getAttribute('data-target');
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

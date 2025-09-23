@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.1 Disinformation, surveillance, and influence at scale - Required Actors Responsibility Assessment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #a32035;
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        .nav-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .nav-pill {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 25px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'Figtree', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            color: #555;
+        }
+
+        .nav-pill:hover {
+            background: #e9ecef;
+            border-color: #a32035;
+        }
+
+        .nav-pill.active {
+            background: #a32035;
+            color: white;
+            border-color: #a32035;
+        }
+
+        .actor-section {
+            display: none;
+        }
+
+        .actor-section.active {
+            display: block;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .content-column {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .criteria-header {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid;
+        }
+
+        .criteria-header.higher {
+            color: #27ae60;
+            border-bottom-color: #27ae60;
+        }
+
+        .criteria-header.lower {
+            color: #e74c3c;
+            border-bottom-color: #e74c3c;
+        }
+
+        .summary-section {
+            margin-bottom: 20px;
+        }
+
+        .summary-text {
+            margin-bottom: 15px;
+            font-weight: 500;
+            color: #444;
+        }
+
+        .quote-details {
+            margin-top: 15px;
+        }
+
+        .quote-toggle {
+            cursor: pointer;
+            color: #a32035;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 8px 0;
+            border-bottom: 1px dotted #a32035;
+            display: inline-block;
+        }
+
+        .quote-toggle:hover {
+            color: #8a1c2e;
+        }
+
+        .quote-list {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .quote-list li {
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .nav-pills {
+                justify-content: flex-start;
+            }
+
+            .nav-pill {
+                font-size: 12px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>4.1 Disinformation, surveillance, and influence at scale - Required Actors Responsibility Assessment</h1>
+
+        <div class="nav-pills">
+            
+            <button class="nav-pill active" data-target="AIDeveloperGeneralpurposeAI">
+                AI Developer (General-purpose AI)
+            </button>
+            <button class="nav-pill " data-target="AIDeployer">
+                AI Deployer
+            </button>
+            <button class="nav-pill " data-target="AIGovernanceActor">
+                AI Governance Actor
+            </button>
+            <button class="nav-pill " data-target="AIUser">
+                AI User
+            </button>
+        </div>
+
+        <div class="content-sections">
+            
+            <div class="actor-section active" id="AIDeveloperGeneralpurposeAI">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments consistently emphasized developers' primary responsibility for designing systems most often misused in disinformation campaigns, with obligations to watermark outputs, though some noted difficulty addressing misleading presentation of true facts requiring regulatory coordination.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (8)</summary>
+                <ul class="quote-list">
+                    <li>"My assessments emphasize that general-purpose developers and deployers are primarily responsible, since they design and operate the systems most often misused in large-scale disinformation and surveillance campaigns."</li><li>"Developers do have an opportunity to take some actions which can be beneficial to the larger aims here, like ensuring AI outputs are watermarked, which would aid such efforts."</li><li>"• AI Developer (General-purpose and Specialized): These actors hold direct control over models capable of language manipulation, data harvesting, and automated influence at scale. Their tools may unintentionally empower malicious use even without direct intent, especially when open-sourced or made publicly available."</li><li>"... developers are most responsible for providing the tools to enable these risks and subsequent harms."</li><li>"AI Developer (General-purpose AI): The primary responsibility lies with this actor because general models can be used for large-scale content generation, including disinformation, without granular control over usage."</li><li>"AI Developer (General-purpose AI) - Highly Responsible: While general-purpose AI developers don't specifically design systems for disinformation, they have some responsibility to implement safeguards that make it harder to use their systems for large-scale manipulation campaigns. They should at least not allow AI's values to be encoded only by a small group of people with privileged connections and power."</li><li>"AI developers and deployers have both very high capability and causal influence (and therefore obligation)"</li><li>"If we conceptualize the 'information space' as a public good, we can identify inherent collective action problems that will worsen with AI-enabled disinformation. Typically, a central, legitimate governing authority is needed to resolve these issues, suggesting AI Governance actors may necessarily be primary responsibility holders. However, increasingly the central governing authority may become the AI developer/deployer/infrastructure all in one (for example, Meta and disinformation on Facebook)"</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Some comments noted developers have lower responsibility when context-dependent factors like data poisoning or user choices drive disinformation spread rather than model design alone.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (2)</summary>
+                <ul class="quote-list">
+                    <li>"Generation of straightforwardly false information is less of a worry here, and it's more the presentation of facts that are true in a misleading way. Given that's the case, it seems quite hard for developers to be able to address this risk fully as there likely needs to be some sort of larger regulatory coordination to set forward a policy that would apply across actors."</li><li>"While developers of all kinds should be highly responsible, I chose not to make them primarily responsible because the use of a model to produce disinformation, the choice to use targeted data poisoning to implant disinformation into a model, and other factors may be the primary factor leading to the spread of disinformation or the use of a model for influence and surveillance. It will depend on the context."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIDeployer">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments unanimously emphasized deployers' primary to high responsibility for operating systems misused in campaigns, deciding implementation contexts that can prevent or facilitate influence operations.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (6)</summary>
+                <ul class="quote-list">
+                    <li>"My assessments emphasize that general-purpose developers and deployers are primarily responsible, since they design and operate the systems most often misused in large-scale disinformation and surveillance campaigns."</li><li>"AI Deployer: It has a major responsibility because it decides in which context the AI is implemented. It can prevent or facilitate use for influence purposes."</li><li>"AI Deployer - Highly Responsible: Deployers who integrate AI systems into platforms or services used for disinformation campaigns have high responsibility. They can implement safeguards, content moderation to prevent misuse. They control to an extent what AI should and should not do through system prompts."</li><li>"People deploying AI systems are responsible for their use, and should ensure that use is within policy for disinformation or mass surveillance."</li><li>"AI developers and deployers have both very high capability and causal influence (and therefore obligation)"</li><li>"If we conceptualize the 'information space' as a public good, we can identify inherent collective action problems that will worsen with AI-enabled disinformation. Typically, a central, legitimate governing authority is needed to resolve these issues, suggesting AI Governance actors may necessarily be primary responsibility holders. However, increasingly the central governing authority may become the AI developer/deployer/infrastructure all in one (for example, Meta and disinformation on Facebook)"</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">No comments provided.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIGovernanceActor">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments overwhelmingly rated governance actors as primary to highly responsible for establishing rules limiting AI abuses, with government particularly important for political manipulation, conceptualizing information space as a public good requiring central authority.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (5)</summary>
+                <ul class="quote-list">
+                    <li>"Governance actors are also highly responsible, as regulation and oversight are vital to counter systemic manipulation."</li><li>"I generally believe that many things that are technically possible need to be banned (some jurisdictions are further along than others in this). The market left by itself will not create the right outcomes."</li><li>"AI Governance Actor: It is essential in establishing rules and regulations that can limit AI abuses. Without their intervention, the systems can be used uncontrollably."</li><li>"AI Governance Actor - Primarily Responsible: Governance actors have the ultimate authority to create laws, policies, and regulatory frameworks that can prevent or penalize the use of AI for large-scale disinformation campaigns and malicious surveillance. They set the legal boundaries and enforcement mechanisms that other actors must follow."</li><li>"If we conceptualize the 'information space' as a public good, we can identify inherent collective action problems that will worsen with AI-enabled disinformation. Typically, a central, legitimate governing authority is needed to resolve these issues, suggesting AI Governance actors may necessarily be primary responsibility holders. However, increasingly the central governing authority may become the AI developer/deployer/infrastructure all in one (for example, Meta and disinformation on Facebook)"</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">No comments provided.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIUser">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Some comments emphasized users bear responsibility for deliberately employing AI for disinformation campaigns and can amplify negative effects by distributing AI-generated content, requiring learning efforts for discernment.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (3)</summary>
+                <ul class="quote-list">
+                    <li>"Smaller part of responsibility to users who have to step up learning efforts to reinforce discernment and ability to interpret information"</li><li>"AI User: Although they have no control over development or implementation, the user can amplify the negative effects by distributing AI-generated content."</li><li>"AI User - Primarily Responsible: Users who deliberately employ AI systems to conduct disinformation campaigns, surveillance operations, or propaganda efforts bear direct responsibility for these harmful applications. They make the conscious choice to use AI for manipulating political processes and public opinion."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Most comments characterized users as having minimal responsibility as main targets of manipulation, with individual actions lacking adequate impact compared to systemic issues.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (3)</summary>
+                <ul class="quote-list">
+                    <li>"Users and affected stakeholders should not be held responsible, as they are the main targets."</li><li>"AI users may have individual and small scale obligation and capability, as well as causal influence. But therefore, the impact of their actions will likely be equally small-scale and therefore lack adequate impact."</li><li>"Added some responsibility to users, but this is not a current measure of their capability. With sufficient awareness and training, users could develop the capability to discern the reliability of different sources of information. But want to clarify that this in NO WAY encourages obligation from the user"</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const pills = document.querySelectorAll('.nav-pill');
+            const sections = document.querySelectorAll('.actor-section');
+
+            pills.forEach(pill => {
+                pill.addEventListener('click', function() {
+                    // Remove active class from all pills and sections
+                    pills.forEach(p => p.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+
+                    // Add active class to clicked pill
+                    this.classList.add('active');
+
+                    // Show corresponding section
+                    const targetId = this.getAttribute('data-target');
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

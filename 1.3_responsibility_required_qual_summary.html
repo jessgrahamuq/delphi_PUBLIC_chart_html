@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.3 Unequal performance across groups - Required Actors Responsibility Assessment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #a32035;
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        .nav-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .nav-pill {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 25px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'Figtree', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            color: #555;
+        }
+
+        .nav-pill:hover {
+            background: #e9ecef;
+            border-color: #a32035;
+        }
+
+        .nav-pill.active {
+            background: #a32035;
+            color: white;
+            border-color: #a32035;
+        }
+
+        .actor-section {
+            display: none;
+        }
+
+        .actor-section.active {
+            display: block;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .content-column {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .criteria-header {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid;
+        }
+
+        .criteria-header.higher {
+            color: #27ae60;
+            border-bottom-color: #27ae60;
+        }
+
+        .criteria-header.lower {
+            color: #e74c3c;
+            border-bottom-color: #e74c3c;
+        }
+
+        .summary-section {
+            margin-bottom: 20px;
+        }
+
+        .summary-text {
+            margin-bottom: 15px;
+            font-weight: 500;
+            color: #444;
+        }
+
+        .quote-details {
+            margin-top: 15px;
+        }
+
+        .quote-toggle {
+            cursor: pointer;
+            color: #a32035;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 8px 0;
+            border-bottom: 1px dotted #a32035;
+            display: inline-block;
+        }
+
+        .quote-toggle:hover {
+            color: #8a1c2e;
+        }
+
+        .quote-list {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .quote-list li {
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .nav-pills {
+                justify-content: flex-start;
+            }
+
+            .nav-pill {
+                font-size: 12px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>1.3 Unequal performance across groups - Required Actors Responsibility Assessment</h1>
+
+        <div class="nav-pills">
+            
+            <button class="nav-pill active" data-target="AIDeveloperGeneralpurposeAI">
+                AI Developer (General-purpose AI)
+            </button>
+            <button class="nav-pill " data-target="AIDeployer">
+                AI Deployer
+            </button>
+            <button class="nav-pill " data-target="AIGovernanceActor">
+                AI Governance Actor
+            </button>
+            <button class="nav-pill " data-target="AIUser">
+                AI User
+            </button>
+        </div>
+
+        <div class="content-sections">
+            
+            <div class="actor-section active" id="AIDeveloperGeneralpurposeAI">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments overwhelmingly emphasized GPAI developers' primary responsibility as they are the root cause of technical disparities, defining foundations and frameworks for fairness with actual power to address bias issues. Multiple responses noted developers control model behavior, training data, and have complete knowledge of systems including safety guidelines, though some noted they may be unaware of third-party deployment contexts. Comments emphasized developers bear responsibility for creating ethically developed tech and ensuring models are trained on unbiased data.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (7)</summary>
+                <ul class="quote-list">
+                    <li>"Bias in AI and datasets are issues primarily known by AI developers and AI providers, who are the only ones with actual power to do something about it. So they should be the most responsible."</li><li>"My responsibility assessments emphasize that accountability should be placed on those who have both causal influence and capacity. General-purpose developers and governance actors are primarily responsible, as they define the foundations and frameworks for fairness."</li><li>"AI developers are the root cause of technical disparities."</li><li>"Developers and deployers bare the lions share of responsibility of assuring their models are trained on unbiased data."</li><li>"Developers are responsible for creating ethically developed tech and users are responsible for doing their homework and picking an ethical and representative model."</li><li>"I assigned High responsibility to AI developers due to their potential to control model's behavior. However, I do not believe they are primarily responsible since they may often be unaware of how their systems may be deployed or used by third-parties, in which case the responsibility would fall onto the deployers since they are the ones who control the specific deployment and have an understanding on which populations the AI will be used"</li><li>"[1] AI developer (General-purpose AI) – primarily responsible. General-purpose AI developers hold ultimate responsibility because they possess complete knowledge of their AI systems, including training data, filtering processes, system prompts, and safety guidelines. With their technical expertise (high ability) and professional obligation to detect and thoroughly test for unequal treatment and performance across groups (high obligation). They operate at the foundation of the AI ecosystem and bear primary responsibility for AI's behavior."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">One commenter said: "Higher responsibility for AI developers if specialized than GPAI: the more specialized the system is, the easier it is to identify relevant groups for the use case and the more they should investigate group differences."</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIDeployer">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments unanimously emphasized deployers' high to primary responsibility as they operationalize fairness, control application in sensitive domains, and have highest capability through deployment context knowledge. Multiple responses noted deployers decide specific deployment, understand affected populations, and bear responsibility for ensuring models are fair and providing fairness constraints, with direct duty to platform users.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (6)</summary>
+                <ul class="quote-list">
+                    <li>"Specialized developers and deployers are highly responsible, because they control application in sensitive domains and can mitigate performance disparities."</li><li>"AI deployers operationalize fairness."</li><li>"Deployers have the highest capability in this case because they can decide the deployment context, which includes knowledge about which groups will be affected. Therefore, they are primarily responsible."</li><li>"Developers and deployers bare the lions share of responsibility of assuring their models are trained on unbiased data."</li><li>"I assigned High responsibility to AI developers due to their potential to control model's behavior. However, I do not believe they are primarily responsible since they may often be unaware of how their systems may be deployed or used by third-parties, in which case the responsibility would fall onto the deployers since they are the ones who control the specific deployment and have an understanding on which populations the AI will be used"</li><li>"AI Deployers (Highly Responsible) - AI Deployer has a direct user impact while implementing around AI Developer systems. While deployers decide which foundational model to use, they need to ensure that the model is fair as well as provide fairness constraints - direct duty to users who are using the deployer's platform"</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">One commenter said: "[2] AI deployer - moderately responsible. AI deployers are responsible for thoroughly testing deployed AI systems, creating system prompts to guide model behavior, customizing models for specific use cases, and establishing safety guidelines (high obligation and high causal influence). However, their ability is constrained when using closed-source models, because they lack access to black-box systems' inner workings, training data, and original system prompts (low-to-medium ability)."</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIGovernanceActor">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments consistently emphasized governance actors' primary to high responsibility as they enforce compliance, define frameworks for fairness, and ensure control of regulatory environment protecting civil rights. Multiple responses noted they create policies and standards with authority for oversight despite potentially lacking technical expertise. One comment highlighted industry bodies' responsibility through self-regulation and establishing industry standards.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (4)</summary>
+                <ul class="quote-list">
+                    <li>"My responsibility assessments emphasize that accountability should be placed on those who have both causal influence and capacity. General-purpose developers and governance actors are primarily responsible, as they define the foundations and frameworks for fairness."</li><li>"Governance actors enforce compliance."</li><li>"[3] AI governance actor - primarily responsible. Governance actors has the authority to create policies, laws, frameworks, and standards governing AI systems. They bear responsibility for properly overseeing and evaluating AI models, which involves detecting when AI systems are showing unfair treatment across groups. Although they may lack technical expertise to directly modify AI behaviors, their regulatory authority makes them primarily responsible for establishing the frameworks that prevent unequal performance across groups."</li><li>"AI Governance Actors (Highly Responsible) - ensures the control of the regulatory environment and ensures fairness and protect civil rights in the AI systems"</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">No comments provided.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIUser">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">[SUMMARY NOT FOUND - SUMMARY NEEDED]</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (3)</summary>
+                <ul class="quote-list">
+                    <li>"The users bare responsibility of researching the model's they use and making responsible selections."</li><li>"Developers are responsible for creating ethically developed tech and users are responsible for doing their homework and picking an ethical and representative model."</li><li>"[3] AI user - highly responsible. Although users cannot control models' inner workings (low-to-medium capability), they can employ prompt engineering techniques to balance performance across different groups, they are also responsible for checking and verifying results are not biased against certain groups (high obligation and causal influence). However, some model behaviors remain beyond user control even with extensive prompt engineering, such as automated prompt revision processes that cannot be disabled."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">One commenter said: "Infrastructure providers have only a marginal role, while users and affected stakeholders cannot reasonably be held responsible since they lack agency and resources."</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const pills = document.querySelectorAll('.nav-pill');
+            const sections = document.querySelectorAll('.actor-section');
+
+            pills.forEach(pill => {
+                pill.addEventListener('click', function() {
+                    // Remove active class from all pills and sections
+                    pills.forEach(p => p.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+
+                    // Add active class to clicked pill
+                    this.classList.add('active');
+
+                    // Show corresponding section
+                    const targetId = this.getAttribute('data-target');
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

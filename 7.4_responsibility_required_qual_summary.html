@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.4 Lack of transparency or interpretability - Required Actors Responsibility Assessment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #a32035;
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        .nav-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .nav-pill {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 25px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'Figtree', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            color: #555;
+        }
+
+        .nav-pill:hover {
+            background: #e9ecef;
+            border-color: #a32035;
+        }
+
+        .nav-pill.active {
+            background: #a32035;
+            color: white;
+            border-color: #a32035;
+        }
+
+        .actor-section {
+            display: none;
+        }
+
+        .actor-section.active {
+            display: block;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .content-column {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .criteria-header {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid;
+        }
+
+        .criteria-header.higher {
+            color: #27ae60;
+            border-bottom-color: #27ae60;
+        }
+
+        .criteria-header.lower {
+            color: #e74c3c;
+            border-bottom-color: #e74c3c;
+        }
+
+        .summary-section {
+            margin-bottom: 20px;
+        }
+
+        .summary-text {
+            margin-bottom: 15px;
+            font-weight: 500;
+            color: #444;
+        }
+
+        .quote-details {
+            margin-top: 15px;
+        }
+
+        .quote-toggle {
+            cursor: pointer;
+            color: #a32035;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 8px 0;
+            border-bottom: 1px dotted #a32035;
+            display: inline-block;
+        }
+
+        .quote-toggle:hover {
+            color: #8a1c2e;
+        }
+
+        .quote-list {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .quote-list li {
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .nav-pills {
+                justify-content: flex-start;
+            }
+
+            .nav-pill {
+                font-size: 12px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>7.4 Lack of transparency or interpretability - Required Actors Responsibility Assessment</h1>
+
+        <div class="nav-pills">
+            
+            <button class="nav-pill active" data-target="AIDeveloperGeneralpurposeAI">
+                AI Developer (General-purpose AI)
+            </button>
+            <button class="nav-pill " data-target="AIDeployer">
+                AI Deployer
+            </button>
+            <button class="nav-pill " data-target="AIGovernanceActor">
+                AI Governance Actor
+            </button>
+            <button class="nav-pill " data-target="AIUser">
+                AI User
+            </button>
+        </div>
+
+        <div class="content-sections">
+            
+            <div class="actor-section active" id="AIDeveloperGeneralpurposeAI">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments overwhelmingly emphasized GPAI developers as primarily responsible since they architect foundational logic, control prompt revision processes, and are the only ones with actual capability to make AI transparent, though some noted fiduciary duties incentivize limiting transparency to avoid liability.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (9)</summary>
+                <ul class="quote-list">
+                    <li>"General-purpose AI developers are primarily responsible as their design choices directly affect model transparency across applications."</li><li>"AI developer was rated as primarily responsible because they are often the only ones in the pipeline that have the actual capability to make AI decisions transparent and interpretable"</li><li>"[1] AI Developers - Primarily Responsible: I rated AI developers as primarily responsible because they are the actors who implement the prompt revision processes and design the system prompts that govern model behavior. They have direct control over these mechanisms and therefore bear the primary responsibility for being transparent about what system prompts they use and how their prompt revision processes function."</li><li>"AI Developers are responsible for the quality of their products, and transparency/interpretability can greatly assist in evaluating the quality."</li><li>"Again, AI developers are primarily responsible since they would be the ones researching foundational interpretability methods. Deployers and governance have some influence over setting standards, but developers are the ones actually researching these methods."</li><li>"General-purpose AI Developers were marked as primarily responsible because they architect the foundational logic of systems used across sectors."</li><li>"Transparency and interpretability are ultimately technical issues at their base and so developers are most responsible along with deployers who have the opportunity to enhance interpretability and transparency in deploying the model."</li><li>"The primarily bottlenecks to transparency and interpretability sit at the model development stage. It is primarily up to developers and policymakers to ensure that the right technology gets developed."</li><li>"Lower rates are given to either actors who do not have access to the technology to be able to practically address the risk or are enablers. Higher rates are given to actors who have responsibility in the design, development, and deployment of the AI systems and hence have the means to mitigate the lack of transparency and interpretability risk."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">One commenter said: "Developers have the capability and causal influence to be transparent, and the obligation to. However, they usually will not due to fiduciary duties to stakeholders that incentivize these organizations to limit transparency to limit liability."</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIDeployer">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments emphasized deployers' high responsibility through power to choose transparent systems, collaborate with developers who disclose system prompts, and enhance transparency when deploying models while stating data provenance.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (5)</summary>
+                <ul class="quote-list">
+                    <li>"Specialized AI developers and deployers are highly responsible for ensuring interpretability in domain-specific contexts and for users' decision-making."</li><li>"[2] AI Deployers - Highly Responsible: I rated AI deployers as highly responsible because they have the power to make informed choices about which AI systems to implement. They can choose to use only open-sourced models with higher transparency and interpretability, or they can choose to collaborate exclusively with developers and companies who disclose their system prompts."</li><li>"AI Deployers and Governance Actors are highly responsible because they choose how to implement and oversee these systems."</li><li>"Transparency and interpretability are ultimately technical issues at their base and so developers are most responsible along with deployers who have the opportunity to enhance interpretability and transparency in deploying the model."</li><li>"Deployers can help by stating the provenance of their data/model systems and the contexts they sourced it from and how they have tweaked it and expect it to be useful"</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">No comments provided.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIGovernanceActor">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments consistently rated governance actors as primarily to highly responsible, possessing greatest power through policy and regulation to mandate transparency requirements, enforce interpretability standards, and ensure organizations follow best practices.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (6)</summary>
+                <ul class="quote-list">
+                    <li>"Governance actors also hold high responsibility, as they must enforce interpretability standards and accountability mechanisms."</li><li>"Governance actors must ensure strict controls and testing around that."</li><li>"[3] AI Governance Actors - Primarily Responsible: I rated governance actors as primarily responsible because they possess the greatest power to address this issue through policy, regulation and law. They can push forward laws and policies that require companies to be transparent about their system prompts and prompt revision processes. Additionally, they can mandate that companies provide access to base model behavior without prompt revision at least in the model evaluation process, ensuring that evaluators and researchers can assess true model capabilities. Governance actors ultimately hold the most significant power in ensuring transparency and interpretability across the AI ecosystem."</li><li>"AI Deployers and Governance Actors are highly responsible because they choose how to implement and oversee these systems."</li><li>"Governance actors are highly responsible for ensuring deployers and developers follow best practices to ensure these norms."</li><li>"Therefore governments and policy makers are responsible for developing rules to ensure that these organizations are transparent."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">No comments provided.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIUser">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Some comments emphasized users bear responsibility when demanding transparency as consumers and for understanding AI limitations rather than taking outputs as truth.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (3)</summary>
+                <ul class="quote-list">
+                    <li>"The only way transparency will be available is when users (consumers) demand it, as was the case with (SBoM's) or Software Bill of Materials."</li><li>"Users and stakeholders are not responsible for making tools interpretable or transparent but are responsible for understanding the pitfalls and limits in these areas and also responsible for being transparent about their own uses of AI to any downstream stakeholders."</li><li>"taking its output as truth is the bug of the user, not the system and education on AI's capabilites should rest with regulators."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Most comments characterized users as minimally responsible, lacking structural capacity to address systemic transparency gaps and visibility into system design, though some noted responsibility for understanding limitations and being transparent about their own AI use.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (3)</summary>
+                <ul class="quote-list">
+                    <li>"Users and affected stakeholders have minimal or no responsibility, as they lack the structural capacity to address systemic transparency gaps"</li><li>"Users often lack insights that could be gained from manufacturers making their algorithms clear and predictable."</li><li>"AI Users have some influence but often lack visibility into the system's design‚ hence only moderately responsible."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const pills = document.querySelectorAll('.nav-pill');
+            const sections = document.querySelectorAll('.actor-section');
+
+            pills.forEach(pill => {
+                pill.addEventListener('click', function() {
+                    // Remove active class from all pills and sections
+                    pills.forEach(p => p.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+
+                    // Add active class to clicked pill
+                    this.classList.add('active');
+
+                    // Show corresponding section
+                    const targetId = this.getAttribute('data-target');
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

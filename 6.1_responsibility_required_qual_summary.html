@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6.1 Power centralization and unfair distribution of benefits - Required Actors Responsibility Assessment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #a32035;
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        .nav-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .nav-pill {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 25px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'Figtree', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            color: #555;
+        }
+
+        .nav-pill:hover {
+            background: #e9ecef;
+            border-color: #a32035;
+        }
+
+        .nav-pill.active {
+            background: #a32035;
+            color: white;
+            border-color: #a32035;
+        }
+
+        .actor-section {
+            display: none;
+        }
+
+        .actor-section.active {
+            display: block;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .content-column {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .criteria-header {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid;
+        }
+
+        .criteria-header.higher {
+            color: #27ae60;
+            border-bottom-color: #27ae60;
+        }
+
+        .criteria-header.lower {
+            color: #e74c3c;
+            border-bottom-color: #e74c3c;
+        }
+
+        .summary-section {
+            margin-bottom: 20px;
+        }
+
+        .summary-text {
+            margin-bottom: 15px;
+            font-weight: 500;
+            color: #444;
+        }
+
+        .quote-details {
+            margin-top: 15px;
+        }
+
+        .quote-toggle {
+            cursor: pointer;
+            color: #a32035;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 8px 0;
+            border-bottom: 1px dotted #a32035;
+            display: inline-block;
+        }
+
+        .quote-toggle:hover {
+            color: #8a1c2e;
+        }
+
+        .quote-list {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .quote-list li {
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .nav-pills {
+                justify-content: flex-start;
+            }
+
+            .nav-pill {
+                font-size: 12px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>6.1 Power centralization and unfair distribution of benefits - Required Actors Responsibility Assessment</h1>
+
+        <div class="nav-pills">
+            
+            <button class="nav-pill active" data-target="AIDeveloperGeneralpurposeAI">
+                AI Developer (General-purpose AI)
+            </button>
+            <button class="nav-pill " data-target="AIDeployer">
+                AI Deployer
+            </button>
+            <button class="nav-pill " data-target="AIGovernanceActor">
+                AI Governance Actor
+            </button>
+            <button class="nav-pill " data-target="AIUser">
+                AI User
+            </button>
+        </div>
+
+        <div class="content-sections">
+            
+            <div class="actor-section active" id="AIDeveloperGeneralpurposeAI">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments emphasized GPAI developers' primary responsibility through control of technical standards, model supply, pricing, and scale economics driving centralization, with obligations to ship portability paths and avoid exploitative practices, though some noted responsibilities to shareholders compromise capability.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (6)</summary>
+                <ul class="quote-list">
+                    <li>"Responsibility is concentrated in general-purpose AI developers infrastructure providers and governance actors as they control the technical standards compute resources and regulatory levers that determine whether power centralizes or distributes."</li><li>"GPAI developers (high). Capability: control over model supply APIs pricing telemetry defaults and bundling. Causal influence: scale economics and self-preferencing drive centralization. Obligation: ship portability paths avoid feature kill-zones disclose preferential routing curb exploitative egress fees. High due to the causal influence though since they have a counter-obligation to shareholders capability is compromised by design."</li><li>"it is the responsibility of the frontier labs to work out a way that what they are doing is not effectively the end of the world."</li><li>"I rated AI developers as primarily responsible because they possess the most power and resources both financial and computational to address power centralization and unfair distribution of benefits. They have the capacity to include diverse stakeholders and communities in the AI development process but the key question is whether they are willing to invest the necessary resources to involve people from diverse backgrounds."</li><li>"AI developers and companies should commit to using generated revenue for social good specifically conducting outreach with marginalized communities traditionally excluded from AI development processes."</li><li>"Developers build the systems deployers bring them to market governance actors set the guardrails and users drive demand. Justice requires balance — not blame."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">No comments provided.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIDeployer">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments emphasized deployers' high responsibility through procurement choices determining whether to adopt monopolistic systems or diversify suppliers, with equal responsibility for ensuring accessibility across demographic groups.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (3)</summary>
+                <ul class="quote-list">
+                    <li>"Deployers also carry high responsibility by deciding whether to adopt monopolistic systems or diversify suppliers."</li><li>"AI deployers (moderate). Capability: procurement choices—multi-model routing portability clauses funding open-weight/on-prem options resisting predatory bundles. Causal influence: demand signals that either reinforce or counter concentration. Probably developers should not be deployers but if they are that would raise the responsibility to high qua deployer."</li><li>"AI deployers bear equal responsibility for ensuring accessibility across different demographic groups."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">No comments provided.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIGovernanceActor">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments overwhelmingly emphasized governance actors' primary responsibility through obligation to safeguard competition and capability for antitrust enforcement, though some noted limited capability due to corporate lobbying and existing debt crises.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (6)</summary>
+                <ul class="quote-list">
+                    <li>"Responsibility is concentrated in general-purpose AI developers infrastructure providers and governance actors as they control the technical standards compute resources and regulatory levers."</li><li>"AI governance actors (primary). Obligation: safeguard competition bargaining power and domestic value capture. Capability: antitrust and merger review procurement design portability/data-mobility mandates compute/export controls. Causal influence: rules can entrench incumbents or diffuse power. I think primary because it has both an obligation to present such a thing and the capability to stop it."</li><li>"I consider this mostly to be a market failure problem made worse by certain technical developments and investment trends. Therefore governance not just of AI technology but of failing markets in general should be main solution."</li><li>"Will almost certainly require intervention from governments to prevent this outcome which places responsibility on AI governance actor. Likely needs international cooperation for a stable solution."</li><li>"it is a must that the governments of the world should have a plan for how to make this go well. Governments are the mechanism by which we make binding decisions as a group to solve collective action problems. If governments fail to do this it is the responsibility of the frontier labs to work out a way that what they are doing is not effectively the end of the world."</li><li>"Governance actors should control power centralization through top-down approaches that ensure AI benefits serve all of humanity rather than only privileged populations."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Some comments noted governance actors have lower responsibility due to corporate capture limiting their actual capability despite ostensible obligations.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (2)</summary>
+                <ul class="quote-list">
+                    <li>"The government would ostensibly be the primarily responsible actor but the element of capability suggests actually given corporate lobbying and capture of the current political system in the US the government may not have that capability currently."</li><li>"Most countries already struggle to tax multinational corporations. Lobbying offshore financial shell infrastructure complex legal proceedings none of that gets better when the multinational corporations control even more power. Governments are in debt crises already and most aren't in a bargaining position to extract much of the value."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIUser">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Some comments noted users have moderate responsibility through consumption patterns reinforcing centralization and political voice to steer outcomes, with everyone having responsibility to influence better outcomes.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (2)</summary>
+                <ul class="quote-list">
+                    <li>"AI Users are Moderately Responsible due to the influence of their consumption patterns which can indirectly reinforce power centralization. When users gravitate toward products backed by aggressive sales funnels and extensive marketing campaigns they may unintentionally fuel wealth accumulation in the hands of already dominant players. As consumers we must take responsibility for our preferences and behaviors — recognizing that every click subscription and endorsement shapes the direction of the AI ecosystem."</li><li>"I think everyone in the world has a responsibility to use what political voice they have to try to steer AI toward better outcomes so I've assigned at least moderate responsibility to all entities."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Most comments characterized users as having no responsibility due to limited leverage and fragmented coordination, with individual selections rarely shifting market structures.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (2)</summary>
+                <ul class="quote-list">
+                    <li>"users and affected stakeholders should not be seen as causally responsible as they are primarily impacted by the inequities rather than causing them."</li><li>"AI users (not at all). Limited leverage and fragmented coordination; individual selections seldom shift market structure let alone power structures."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const pills = document.querySelectorAll('.nav-pill');
+            const sections = document.querySelectorAll('.actor-section');
+
+            pills.forEach(pill => {
+                pill.addEventListener('click', function() {
+                    // Remove active class from all pills and sections
+                    pills.forEach(p => p.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+
+                    // Add active class to clicked pill
+                    this.classList.add('active');
+
+                    // Show corresponding section
+                    const targetId = this.getAttribute('data-target');
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

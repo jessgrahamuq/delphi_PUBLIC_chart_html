@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.1 Overreliance and unsafe use - Required Actors Responsibility Assessment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #a32035;
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        .nav-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .nav-pill {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 25px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'Figtree', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            color: #555;
+        }
+
+        .nav-pill:hover {
+            background: #e9ecef;
+            border-color: #a32035;
+        }
+
+        .nav-pill.active {
+            background: #a32035;
+            color: white;
+            border-color: #a32035;
+        }
+
+        .actor-section {
+            display: none;
+        }
+
+        .actor-section.active {
+            display: block;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .content-column {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .criteria-header {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid;
+        }
+
+        .criteria-header.higher {
+            color: #27ae60;
+            border-bottom-color: #27ae60;
+        }
+
+        .criteria-header.lower {
+            color: #e74c3c;
+            border-bottom-color: #e74c3c;
+        }
+
+        .summary-section {
+            margin-bottom: 20px;
+        }
+
+        .summary-text {
+            margin-bottom: 15px;
+            font-weight: 500;
+            color: #444;
+        }
+
+        .quote-details {
+            margin-top: 15px;
+        }
+
+        .quote-toggle {
+            cursor: pointer;
+            color: #a32035;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 8px 0;
+            border-bottom: 1px dotted #a32035;
+            display: inline-block;
+        }
+
+        .quote-toggle:hover {
+            color: #8a1c2e;
+        }
+
+        .quote-list {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .quote-list li {
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .nav-pills {
+                justify-content: flex-start;
+            }
+
+            .nav-pill {
+                font-size: 12px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>5.1 Overreliance and unsafe use - Required Actors Responsibility Assessment</h1>
+
+        <div class="nav-pills">
+            
+            <button class="nav-pill active" data-target="AIDeveloperGeneralpurposeAI">
+                AI Developer (General-purpose AI)
+            </button>
+            <button class="nav-pill " data-target="AIDeployer">
+                AI Deployer
+            </button>
+            <button class="nav-pill " data-target="AIGovernanceActor">
+                AI Governance Actor
+            </button>
+            <button class="nav-pill " data-target="AIUser">
+                AI User
+            </button>
+        </div>
+
+        <div class="content-sections">
+            
+            <div class="actor-section active" id="AIDeveloperGeneralpurposeAI">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments overwhelmingly emphasized GPAI developers' primary responsibility for preventing anthropomorphization and ensuring safeguards, with multiple responses noting they profit from overreliance while refining models to drive engagement. Comments stressed developers must embed transparency and guardrails, incorporate interactive UI/UX features encouraging critical engagement, and design systems preventing overreliance, with responsibility for developing new guardrails to prevent critical thinking from becoming obsolete.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (10)</summary>
+                <ul class="quote-list">
+                    <li>"General-purpose developers and governance actors are highly responsible as they must prevent anthropomorphization and ensure regulatory safeguards."</li><li>"Companies putting AI into products are overselling their capabilities and ignoring the risks."</li><li>"AI Developer (General-purpose AI) - Primarily responsible - Must embed safeguards transparency and guardrails into design."</li><li>"In this case developers are highly responsible because they may refine models to drive more engagement or to make relationships more convincing which may exacerbate vulnerability."</li><li>"primary responsibility lies with AI vendors who profit from overreliance on their systems."</li><li>"Primary responsibility lies with developers deployers and infrastructure providers as they design and control the conditions under which overreliance occurs."</li><li>"No single actor can address this alone and it requires coordinated effort across the ecosystem. Those with the greatest technical capability and control should bear more responsibility as end users often can't assess AI limitations placing a higher burden on developers/deployers."</li><li>"The AI developer is primarily responsible for designing new types of guardrails to prevent overreliance. For example LLMs should incorporate more interactive UI and UX features that encourage users to engage critically with outputs. Without such measures critical thinking as we know it risks becoming obsolete."</li><li>"While responsibility falls on governance actors to address these risks the capability to do so remains with the developers making them most responsible."</li><li>"Primary responsibility should be in the hands of the AI developer in order to not have rogue AIs plundering our societies"</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">No comments provided.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIDeployer">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments unanimously emphasized deployers' high to primary responsibility for assessing models and use contexts to mitigate harms, influencing user trust through deployment context and interfaces. Multiple responses noted deployers should monitor interactions, create blacklists of unacceptable use cases, educate users on limitations, and bear burden of mitigating use cases though not every possible scenario.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (5)</summary>
+                <ul class="quote-list">
+                    <li>"deployers and specialized AI developers bear primary responsibility as they control the design and application of systems in critical domains."</li><li>"AI Deployer - Highly responsible - Influence user trust via deployment context guidance and interfaces."</li><li>"However deployers are most responsible as they must assess the model and how it's being used in order to mitigate these harms."</li><li>"Primary responsibility lies with developers deployers and infrastructure providers as they design and control the conditions under which overreliance occurs."</li><li>"Asking developers to mitigate every use case through design implementation and monitoring activities puts an undue burden on the developer; however it should be on the developer to monitor interactions and create a blacklist of unacceptable use cases and prohibit the AI system from doing those activities and appropriately educating the end user on the nature use and limitations of the AI system."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">No comments provided.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIGovernanceActor">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments consistently emphasized governance actors' high to primary responsibility for establishing standards and enforcement preventing systemic overreliance. Multiple responses highlighted their role in increasing public awareness of overreliance risks, informing users about decisions that shouldn't be delegated, and stepping in where corporate incentives won't align. Comments noted governance failure in prohibiting sensitive applications without appropriate testing.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (7)</summary>
+                <ul class="quote-list">
+                    <li>"AI Governance Actor - Highly responsible - Establish standards and enforcement to prevent systemic overreliance."</li><li>"Highly responsible: Affected stakeholders have ethical duties when deploying AI in vulnerable settings. Governance actors and domain-specific developers shape trust boundaries."</li><li>"We will never be able to align the corporate incentives for reducing overreliance. Governance actors must step in and be primarily responsible for mitigating overreliance."</li><li>"Primarily a governance failure to prohibit sensitive applications of AI without appropriate testing"</li><li>"AI governance actors have a key role in increasing public awareness on the risks of overreliance and appropriate behaviours for users to mitigate it."</li><li>"AI governance actors also have a high responsibility in sufficiently informing these AI users on what types of decisions shouldn't be delegated."</li><li>"User education governance and guardrails and deployment strategy are essential to ensure sustained knowledge is not lost forever"</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">No comments provided.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIUser">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments varied widely on user responsibility, with most rating users as moderately responsible for exercising judgment though control is limited. Several noted users enter social contracts for intended use, bearing partial responsibility for overuse and moral obligations for good versus bad use, with primary fault for delegating key decisions. However, others emphasized users cannot be fully responsible when developers drive engagement without proper risk information.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (5)</summary>
+                <ul class="quote-list">
+                    <li>"When engaging with AI Systems end users enter into a social contract with the system that they should use it for its intended purpose. Creating unsafe situations-- like the end-user opting to use ChatGPT for mental health therapy despite it not being a specialized system that should be used for therapy is wholly reflective of the user's decision making."</li><li>"Users are moderately responsible since awareness and critical use are important though their systemic power is limited."</li><li>"Users cannot be seen to be fully responsible if developers are driving models to be more engaging and if the user is not properly informed of these risks but ultimately a user should be partially responsible for overuse."</li><li>"While users arent completely reasonable for the use cases of AI they do have moral obligations on their own ends to decide whether to use AI for good or bad."</li><li>"Humans delegating key decisions is primarily the fault of these humans hence primarily responsible for AI users."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">One commenter said: "Users and affected stakeholders are the most vulnerable but have limited agency to mitigate risks themselves so their responsibility is minimal."</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const pills = document.querySelectorAll('.nav-pill');
+            const sections = document.querySelectorAll('.actor-section');
+
+            pills.forEach(pill => {
+                pill.addEventListener('click', function() {
+                    // Remove active class from all pills and sections
+                    pills.forEach(p => p.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+
+                    // Add active class to clicked pill
+                    this.classList.add('active');
+
+                    // Show corresponding section
+                    const targetId = this.getAttribute('data-target');
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

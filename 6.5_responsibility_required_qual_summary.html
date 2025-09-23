@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6.5 Governance failure - Required Actors Responsibility Assessment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #a32035;
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        .nav-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .nav-pill {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 25px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'Figtree', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            color: #555;
+        }
+
+        .nav-pill:hover {
+            background: #e9ecef;
+            border-color: #a32035;
+        }
+
+        .nav-pill.active {
+            background: #a32035;
+            color: white;
+            border-color: #a32035;
+        }
+
+        .actor-section {
+            display: none;
+        }
+
+        .actor-section.active {
+            display: block;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .content-column {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .criteria-header {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid;
+        }
+
+        .criteria-header.higher {
+            color: #27ae60;
+            border-bottom-color: #27ae60;
+        }
+
+        .criteria-header.lower {
+            color: #e74c3c;
+            border-bottom-color: #e74c3c;
+        }
+
+        .summary-section {
+            margin-bottom: 20px;
+        }
+
+        .summary-text {
+            margin-bottom: 15px;
+            font-weight: 500;
+            color: #444;
+        }
+
+        .quote-details {
+            margin-top: 15px;
+        }
+
+        .quote-toggle {
+            cursor: pointer;
+            color: #a32035;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 8px 0;
+            border-bottom: 1px dotted #a32035;
+            display: inline-block;
+        }
+
+        .quote-toggle:hover {
+            color: #8a1c2e;
+        }
+
+        .quote-list {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .quote-list li {
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .nav-pills {
+                justify-content: flex-start;
+            }
+
+            .nav-pill {
+                font-size: 12px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>6.5 Governance failure - Required Actors Responsibility Assessment</h1>
+
+        <div class="nav-pills">
+            
+            <button class="nav-pill active" data-target="AIDeveloperGeneralpurposeAI">
+                AI Developer (General-purpose AI)
+            </button>
+            <button class="nav-pill " data-target="AIDeployer">
+                AI Deployer
+            </button>
+            <button class="nav-pill " data-target="AIGovernanceActor">
+                AI Governance Actor
+            </button>
+            <button class="nav-pill " data-target="AIUser">
+                AI User
+            </button>
+        </div>
+
+        <div class="content-sections">
+            
+            <div class="actor-section active" id="AIDeveloperGeneralpurposeAI">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Multiple comments highlighted GPAI developers' high responsibility due to their role in system design, transparency requirements, and influence through lobbying. Responses noted tension between their fiduciary duties to shareholders and broader public interest obligations.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (10)</summary>
+                <ul class="quote-list">
+                    <li>"General-purpose and specialized AI developers are highly responsible for ensuring compliance transparency and auditability in system design."</li><li>"AI Developers (General-purpose) and Governance Actors bear primary responsibility as they architect the rules and the core capabilities of systems with broad application. If governance protocols are absent or ineffective the responsibility lies with those who either built without constraints or failed to implement oversight mechanisms."</li><li>"GPAI developers: Moderately responsible. Control model design release practices evals logging transparency and safe defaults; strong causal influence on downstream governance success as they drive the pace of development."</li><li>"AI developers also play a key role - either in supporting and codesigning or resisting regulation."</li><li>"Large-scale and deep lobbying by AI developers AND lack of reaction to this lobbying by AI Governance actors are the entangled causes of governance failure."</li><li>"I see this responsibility issue as one of coordination. There's fewer governments and GPAI developers to coordinate and their actions are also more consequential."</li><li>"AI Developer (General-purpose AI) - Highly responsible - Risk of releasing unsafe models if unchecked; must ensure compliance and transparency."</li><li>"Industry actors are highly responsible as they have the required information on where the technology is going and often the research on harms to support effective policymaking and should be open in trying to enable governments regulators etc. to develop effective policy. However it should be recognized that they have fiduciary duties to their stakeholders that may go against the broader public interest."</li><li>"High responsibility for AI developers (GPAI + specialized) because they have a duty to report to AI governance actors on any concrete challenge or technical barrier that they can experience under the existing governance schemes otherwise these can't be improved and better tailored."</li><li>"Governments and developers are the main actors in the threat profile I outlined."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">One commenter said: "GPAI developers and AI deployers are somewhat responsible in the sense of the voluntary practices they can follow to mitigate risks. But since their fiduciary responsibility is to their shareholders and their goal is primarily profit maximization their obligation to mitigate this risk is pretty minimal."</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIDeployer">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments consistently emphasized deployers' high responsibility for implementation, monitoring, and assessing governance readiness before launch. Responses noted deployment choices are where failures often originate.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (7)</summary>
+                <ul class="quote-list">
+                    <li>"Deployers have a moderate role since they must apply governance in real-world contexts."</li><li>"Deployers are highly responsible because they actively choose to release and operationalize models - they must assess governance readiness before launch."</li><li>"AI deployers: Highly responsible. Control implementation access monitoring incident response overrides and procurement standards; failures often originate in deployment choices."</li><li>"Every builder deployer and institutional user of AI is responsible for governance to mitigate harms in their own realm."</li><li>"Deployers should be responsible for example through a sense of caution and fiduciary responsibility to society beyond their shareholders but this is harder to ensure without hard laws."</li><li>"AI Deployer - Highly responsible - Exposed to reputational/legal risks; responsible for safe compliant deployment."</li><li>"Users and deployers are responsible to the extent that a large part of the risk mitigation comes from society building up resilience and its own antibodies to fast-moving change."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">One commenter said: "GPAI developers and AI deployers are somewhat responsible in the sense of the voluntary practices they can follow to mitigate risks. But since their fiduciary responsibility is to their shareholders and their goal is primarily profit maximization their obligation to mitigate this risk is pretty minimal."</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIGovernanceActor">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Expert comments overwhelmingly emphasized governance actors' primary responsibility for setting regulatory frameworks, oversight mechanisms, and managing governance failures. Several responses noted that governance failure typically falls on agencies responsible for oversight, as has been the case historically.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (14)</summary>
+                <ul class="quote-list">
+                    <li>"AI Governance Actors are primarily responsible as they set the regulatory and oversight frameworks that determine how risks are managed."</li><li>"governance failure will fall on the agency responsible for oversight. That has been the case for every large scale failure."</li><li>"AI Developers (General-purpose) and Governance Actors bear primary responsibility as they architect the rules and the core capabilities of systems with broad application."</li><li>"AI governance actors: Primarily responsible. Obligation to set rules and oversight; capability via law audits procurement funding; causal influence through policy design and coordination."</li><li>"AI governance actors are primarily responsible. But AI developers also play a key role - either in supporting and codesigning or resisting regulation. Every actor has some role to play."</li><li>"It is the responsibility of the governance actors to create and the other stakeholders to implement AI governance effectively as any governance is only as good as its implementation."</li><li>"Affected stakeholders like communities should also shoulder some responsibility in democratic republics to ensure that governance actors do their job"</li><li>"Large-scale and deep lobbying by AI developers AND lack of reaction to this lobbying by AI Governance actors are the entangled causes of governance failure."</li><li>"Governance actor should be responsible for governance failure I don't think other actors should self-regulate."</li><li>"AI Governance Actor - Primarily responsible - Governance failure originates here; weak oversight undermines legitimacy."</li><li>"High responsibility for AI developers (GPAI + specialized) because they have a duty to report to AI governance actors on any concrete challenge or technical barrier that they can experience under the existing governance schemes otherwise these can't be improved and better tailored."</li><li>"Governments and developers are the main actors in the threat profile I outlined."</li><li>"Most of the weight lies on Governance actors and developers to slow down the shock and speed of this change as well as the infrastructure providers (they are very significant profiters so have some responsibility to play in helping to manage this transition)."</li><li>"Being primarily concerned with governance risks of the following form: 1. Governments and corporations take no particular steps to prevent a default path from happening 2. AI that can match or exceed human performance at ~all professional/managerial tasks is created. 3. Economic incentives lead to these systems having full autonomy 4. Humans are broadly disempowered"</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">No comments provided.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIUser">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Some comments suggested users have higher responsibility through political leverage, AI literacy requirements, and role in building societal resilience to fast-moving change.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (3)</summary>
+                <ul class="quote-list">
+                    <li>"Users and citizens are responsible insofar as they have political leverage but it's a longer time horizon to coordinate this many interests."</li><li>"I think the main point here is why I think the AI user is highly responsible even though the entity does not conduct a substantial modification. My main motivation is that AI literacy is important but not enough to ensure that not only safety but that other relevant concerns such as efficiency and sustainability are ensured from implementing AI solutions."</li><li>"Users and deployers are responsible to the extent that a large part of the risk mitigation comes from society building up resilience and its own antibodies to fast-moving change."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Most comments characterized users as minimally responsible with limited leverage, operating within boundaries of provided systems. Comments noted they must follow policies but lack control over frameworks.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (4)</summary>
+                <ul class="quote-list">
+                    <li>"Users and affected stakeholders hold minimal or no responsibility as they operate within the governance structures created by others."</li><li>"Users are only moderately responsible as most operate within the boundaries of the systems provided to them."</li><li>"AI users: Minimally responsible. Limited leverage; must follow policies training and reporting."</li><li>"AI User - Minimally responsible - Exposed to unsafe systems but has limited influence on governance frameworks."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const pills = document.querySelectorAll('.nav-pill');
+            const sections = document.querySelectorAll('.actor-section');
+
+            pills.forEach(pill => {
+                pill.addEventListener('click', function() {
+                    // Remove active class from all pills and sections
+                    pills.forEach(p => p.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+
+                    // Add active class to clicked pill
+                    this.classList.add('active');
+
+                    // Show corresponding section
+                    const targetId = this.getAttribute('data-target');
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

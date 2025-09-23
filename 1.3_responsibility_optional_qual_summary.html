@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.3 Unequal performance across groups - Optional Actors Responsibility Assessment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #a32035;
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        .nav-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .nav-pill {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 25px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'Figtree', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            color: #555;
+        }
+
+        .nav-pill:hover {
+            background: #e9ecef;
+            border-color: #a32035;
+        }
+
+        .nav-pill.active {
+            background: #a32035;
+            color: white;
+            border-color: #a32035;
+        }
+
+        .actor-section {
+            display: none;
+        }
+
+        .actor-section.active {
+            display: block;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .content-column {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .criteria-header {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid;
+        }
+
+        .criteria-header.higher {
+            color: #27ae60;
+            border-bottom-color: #27ae60;
+        }
+
+        .criteria-header.lower {
+            color: #e74c3c;
+            border-bottom-color: #e74c3c;
+        }
+
+        .summary-section {
+            margin-bottom: 20px;
+        }
+
+        .summary-text {
+            margin-bottom: 15px;
+            font-weight: 500;
+            color: #444;
+        }
+
+        .quote-details {
+            margin-top: 15px;
+        }
+
+        .quote-toggle {
+            cursor: pointer;
+            color: #a32035;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 8px 0;
+            border-bottom: 1px dotted #a32035;
+            display: inline-block;
+        }
+
+        .quote-toggle:hover {
+            color: #8a1c2e;
+        }
+
+        .quote-list {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .quote-list li {
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .nav-pills {
+                justify-content: flex-start;
+            }
+
+            .nav-pill {
+                font-size: 12px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>1.3 Unequal performance across groups - Optional Actors Responsibility Assessment</h1>
+
+        <div class="nav-pills">
+            
+            <button class="nav-pill active" data-target="AIDeveloperSpecializedAI">
+                AI Developer (Specialized AI)
+            </button>
+            <button class="nav-pill " data-target="AIInfrastructureProvider">
+                AI Infrastructure Provider
+            </button>
+            <button class="nav-pill " data-target="AffectedStakeholder">
+                Affected Stakeholder
+            </button>
+        </div>
+
+        <div class="content-sections">
+            
+            <div class="actor-section active" id="AIDeveloperSpecializedAI">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments consistently rated specialized developers as highly to primarily responsible, with even greater responsibility than general-purpose developers due to domain expertise. Multiple responses emphasized the more specialized the system, the easier to identify relevant groups and investigate differences, with control over application in sensitive domains enabling mitigation of performance disparities. One comment noted responsibility is entirely contingent on domain and application.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (3)</summary>
+                <ul class="quote-list">
+                    <li>"Specialized developers and deployers are highly responsible, because they control application in sensitive domains and can mitigate performance disparities."</li><li>"[5] AI developer (specialized AI) - primarily responsible. Specialized AI developers bear even greater responsibility than general-purpose developers due to their domain expertise. When domain-specialized AI systems still produce biased representations despite developers possessing both technical expertise and domain knowledge, this represents a more severe case with greater responsibility since they have the necessary knowledge to create fair treatment or performance across groups."</li><li>"Higher responsibility for AI developers if specialized than GPAI: the more specialized the system is, the easier it is to identify relevant groups for the use case and the more they should investigate group differences."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">No comments provided.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIInfrastructureProvider">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">[SUMMARY NOT FOUND - SUMMARY NEEDED]</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (3)</summary>
+                <ul class="quote-list">
+                    <li>"Bias in AI and datasets are issues primarily known by AI developers and AI providers, who are the only ones with actual power to do something about it. So they should be the most responsible."</li><li>"[4] AI infrastructure provider - primarily responsible. While cloud computing and chip providers bear minimal responsibility, I rate this sector as primarily responsible due to data providers within this category. Data labeling and crowdsourcing companies like Outlier AI and Amazon MTurk are responsible to an extent to recruit people from diverse backgrounds to label data, ensure diverse representation, ensure fair treatment across groups, and filter out discriminatory, biased, and toxic content from training data. They should review labeled content and establish clear guidelines about unacceptable and discriminatory content on their platforms."</li><li>"Ascribed some responsibility to AI Infrastructure Providers because it included data providers. They certainly do have the capability to address this risk either through better data cleaning or by flagging inadequacies in their data or transparently reporting on their data collection practices that can inform downstream development"</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">One commenter said: "Infrastructure providers have only a marginal role, while users and affected stakeholders cannot reasonably be held responsible since they lack agency and resources."</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AffectedStakeholder">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">One commenter said: "Since affected stakeholders included advocacy groups, ascribed some responsibility to them given their expertise on the impact on target group's which can be helpful to mitigate such risks in the future"</p>
+                            
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments unanimously characterized affected stakeholders as having no responsibility, lacking agency and resources, with holding them responsible constituting victim blaming. Comments noted advocacy groups can lend expertise helpful for mitigating risks through capability not obligation, and stakeholders should be included to voice concerns but not held responsible when excluded.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (2)</summary>
+                <ul class="quote-list">
+                    <li>"Infrastructure providers have only a marginal role, while users and affected stakeholders cannot reasonably be held responsible since they lack agency and resources."</li><li>"[6] Affected stakeholder - not at all responsible. Affected stakeholders should be included in AI development to voice concerns and share perspectives, ensuring equal treatment across groups. However, they should not be held responsible when their voices are excluded from this process, or when they do not get treated equally, as holding them responsible would constitute victim blaming."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const pills = document.querySelectorAll('.nav-pill');
+            const sections = document.querySelectorAll('.actor-section');
+
+            pills.forEach(pill => {
+                pill.addEventListener('click', function() {
+                    // Remove active class from all pills and sections
+                    pills.forEach(p => p.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+
+                    // Add active class to clicked pill
+                    this.classList.add('active');
+
+                    // Show corresponding section
+                    const targetId = this.getAttribute('data-target');
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

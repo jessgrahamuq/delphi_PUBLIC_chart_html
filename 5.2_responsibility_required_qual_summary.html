@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.2 Loss of human agency and autonomy - Required Actors Responsibility Assessment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #a32035;
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        .nav-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .nav-pill {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 25px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'Figtree', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            color: #555;
+        }
+
+        .nav-pill:hover {
+            background: #e9ecef;
+            border-color: #a32035;
+        }
+
+        .nav-pill.active {
+            background: #a32035;
+            color: white;
+            border-color: #a32035;
+        }
+
+        .actor-section {
+            display: none;
+        }
+
+        .actor-section.active {
+            display: block;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .content-column {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .criteria-header {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid;
+        }
+
+        .criteria-header.higher {
+            color: #27ae60;
+            border-bottom-color: #27ae60;
+        }
+
+        .criteria-header.lower {
+            color: #e74c3c;
+            border-bottom-color: #e74c3c;
+        }
+
+        .summary-section {
+            margin-bottom: 20px;
+        }
+
+        .summary-text {
+            margin-bottom: 15px;
+            font-weight: 500;
+            color: #444;
+        }
+
+        .quote-details {
+            margin-top: 15px;
+        }
+
+        .quote-toggle {
+            cursor: pointer;
+            color: #a32035;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 8px 0;
+            border-bottom: 1px dotted #a32035;
+            display: inline-block;
+        }
+
+        .quote-toggle:hover {
+            color: #8a1c2e;
+        }
+
+        .quote-list {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .quote-list li {
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .nav-pills {
+                justify-content: flex-start;
+            }
+
+            .nav-pill {
+                font-size: 12px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>5.2 Loss of human agency and autonomy - Required Actors Responsibility Assessment</h1>
+
+        <div class="nav-pills">
+            
+            <button class="nav-pill active" data-target="AIDeveloperGeneralpurposeAI">
+                AI Developer (General-purpose AI)
+            </button>
+            <button class="nav-pill " data-target="AIDeployer">
+                AI Deployer
+            </button>
+            <button class="nav-pill " data-target="AIGovernanceActor">
+                AI Governance Actor
+            </button>
+            <button class="nav-pill " data-target="AIUser">
+                AI User
+            </button>
+        </div>
+
+        <div class="content-sections">
+            
+            <div class="actor-section active" id="AIDeveloperGeneralpurposeAI">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments overwhelmingly emphasized GPAI developers' primary responsibility for defining foundational capabilities that influence autonomy risks, needing to embed human-centered design and interactive features to prevent overreliance and preserve critical thinking.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (6)</summary>
+                <ul class="quote-list">
+                    <li>"General-purpose AI Developers were marked as Primarily responsible because they define foundational capabilities and constraints that directly influence downstream autonomy risks."</li><li>"General-purpose developers remain highly responsible as they should embed human-centered design principles."</li><li>"Developers of GAI are ultimately responsible for the loss of agency. All other actor should be considered highly responsible. Infrastructure provider to a lesser extent as they are enabler"</li><li>"I feel like the general and specialized AI developers needs to be resp on how AI can be used and how we dont have a loss of agency. If we do we are doomed as the AI would probably make really bad choices based on the biased information it has been trained on."</li><li>"The most critical responsibility lies with those who build foundational capabilities and deployment patterns that either preserve or erode human agency. Some actors bear higher responsibility because agency loss in this way may be difficult to reverse once it occurs."</li><li>"The AI developer is primarily responsible for designing new types of guardrails to prevent overreliance. For example, LLMs should incorporate more interactive UI and UX features that encourage users to engage critically with outputs. Without such measures critical thinking as we know it risks becoming obsolete."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">No comments provided.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIDeployer">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments consistently rated deployers as primarily to highly responsible for controlling how much decision-making is delegated to AI, choosing between replacing versus augmenting human roles, and informing users about appropriate delegation.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (5)</summary>
+                <ul class="quote-list">
+                    <li>"AI deployers and governance actors bear primary responsibility since they control how much decision-making power is delegated to AI and establish rules to preserve human oversight."</li><li>"Deployers and Governance Actors were marked Highly responsible due to their role in implementation regulation and oversight."</li><li>"the deployers and governance experts are primarily responsible here because they are choosing to replace human roles or responsibilities with AI systems. Over-reliance is partly a result of model sophistication but it is primarily driven by a lack of clear framework to deploy in such a way that does not replace or erode human agency and deployers are most likely to opt to do so in order to gain competitive advantage in their field."</li><li>"AI deployers also have a high responsibility in sufficiently informing these AI users on what types of decisions shouldn't be delegated."</li><li>"The key words in 5.2 state When humans delegate key decisions as a result the end user's and the deployers enter into a societal contract about how when and where AI systems are used to perform key tasks and which key tasks they select to delegate."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">No comments provided.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIGovernanceActor">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments emphasized governance actors' primary to high responsibility for establishing rules preserving human oversight, setting safe defaults, and informing users about appropriate delegation of decisions.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (5)</summary>
+                <ul class="quote-list">
+                    <li>"AI deployers and governance actors bear primary responsibility since they control how much decision-making power is delegated to AI and establish rules to preserve human oversight."</li><li>"Deployers and Governance Actors were marked Highly responsible due to their role in implementation regulation and oversight."</li><li>"I think users are primarily responsible because loss of agency follows from a user's handoff of decisions to systems. Users choose automation levels accept defaults skip review steps and neglect override capacity. The responsibility triad (obligation capability causal influence) applied whether the user sits inside government a deploying firm or a development team. Caveat: power asymmetries dark patterns and policy mandates can constrain users. Hence I also rate governance actors highly responsible for safe defaults and real opt-outs."</li><li>"the deployers and governance experts are primarily responsible here because they are choosing to replace human roles or responsibilities with AI systems."</li><li>"AI governance actors also have a high responsibility in sufficiently informing these AI users on what types of decisions shouldn't be delegated."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">No comments provided.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actor-section " id="AIUser">
+                <div class="content-grid">
+                    <div class="content-column">
+                        <h3 class="criteria-header higher">Higher Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments varied widely, with some rating users as primarily responsible for choosing automation levels and accepting defaults, while others noted moderate responsibility due to operating within constraints they didn't create.</p>
+                            
+            <details class="quote-details">
+                <summary class="quote-toggle">See all expert comments (6)</summary>
+                <ul class="quote-list">
+                    <li>"Those few that develop the tech that changes society ultimately are responsible for that change for the better or the worse BUT users should be informed users that are focal about negative consequences of tech and vote with their wallets in no supporting tech that disenfranchises large swathes of peoples."</li><li>"I think users are primarily responsible because loss of agency follows from a user's handoff of decisions to systems. Users choose automation levels accept defaults skip review steps and neglect override capacity."</li><li>"All actors are primarily responsible if they choose to deploy AI systems in such a way that they become vulnerable to this risk."</li><li>"users should be informed users that are focal about negative consequences of tech and vote with their wallets in no supporting tech that disenfranchises large swathes of peoples."</li><li>"Humans delegating key decisions is primarily the fault of these humans hence primarily responsible for AI users. But AI governance actors and AI deployers also have a high responsibility in sufficiently informing these AI users on what types of decisions shouldn't be delegated."</li><li>"The key words in 5.2 state When humans delegate key decisions as a result the end user's and the deployers enter into a societal contract about how when and where AI systems are used to perform key tasks and which key tasks they select to delegate."</li>
+                </ul>
+            </details>
+                        </div>
+                    </div>
+                    <div class="content-column">
+                        <h3 class="criteria-header lower">Lower Responsibility</h3>
+                        <div class="summary-section">
+                            <p class="summary-text">One commenter said: "AI Users were marked Moderately responsible as they make final decisions but often operate within constraints they did not create."</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const pills = document.querySelectorAll('.nav-pill');
+            const sections = document.querySelectorAll('.actor-section');
+
+            pills.forEach(pill => {
+                pill.addEventListener('click', function() {
+                    // Remove active class from all pills and sections
+                    pills.forEach(p => p.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+
+                    // Add active class to clicked pill
+                    this.classList.add('active');
+
+                    // Show corresponding section
+                    const targetId = this.getAttribute('data-target');
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
