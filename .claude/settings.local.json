@@ -16,7 +16,9 @@
       "Bash(git rm:*)",
       "Bash(git log:*)",
       "Bash(grep:*)",
-      "Bash(git pull:*)"
+      "Bash(git pull:*)",
+      "Bash(git merge:*)",
+      "Bash(git clean:*)"
     ],
     "deny": [],
     "ask": []
