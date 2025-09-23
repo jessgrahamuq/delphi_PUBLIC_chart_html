@@ -18,7 +18,13 @@
       "Bash(grep:*)",
       "Bash(git pull:*)",
       "Bash(git merge:*)",
-      "Bash(git clean:*)"
+      "Bash(git clean:*)",
+      "Bash(for dir in 1.3 3.2 4.1 5.1 6.4)",
+      "Bash(do echo \"Processing directory: $dir\")",
+      "Bash(done)",
+      "Bash(for:*)",
+      "Bash(do echo \"Processing: $file\")",
+      "Bash(do echo \"File: $file\")"
     ],
     "deny": [],
     "ask": []
