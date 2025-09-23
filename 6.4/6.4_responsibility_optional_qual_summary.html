@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsibility</title>
+    <title>6.4 Competitive dynamics - Responsibility</title>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -23,14 +23,17 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 8px;
-        }
+            flex: 1;
+            min-width: 200px;
+            overflow-wrap: break-word;
+            word-break: break-word;        }
 
         h1 {
             text-align: center;
             margin-bottom: 30px;
             color: #000000;
             font-weight: 600;
-            font-size: 15px;
+            font-size: 18px;
         }
 
         .nav-pills {
@@ -48,7 +51,7 @@
             padding: 4px 10px;
             cursor: pointer;
             font-family: 'Figtree', sans-serif;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 500;
             transition: all 0.3s ease;
             color: #000000;
@@ -74,8 +77,8 @@
         }
 
         .content-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: flex;
+            width: 100%;
             gap: 10px;
             min-width: 0;
         }
@@ -85,12 +88,15 @@
             border: 1px solid #e0e0e0;
             border-radius: 8px;
             padding: 8px;
-            min-width: 0;
+            flex: 1;
+            min-width: 200px;
+            overflow-wrap: break-word;
+            word-break: break-word;            min-width: 0;
             overflow-wrap: break-word;
         }
 
         .criteria-header {
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 600;
             margin-bottom: 15px;
             padding-bottom: 10px;
@@ -115,7 +121,7 @@
             margin-bottom: 15px;
             font-weight: 500;
             color: #000000;
-            font-size: 11px;
+            font-size: 13px;
         }
 
         .quote-details {
@@ -126,7 +132,7 @@
             cursor: pointer;
             color: #000000;
             font-weight: 500;
-            font-size: 12px;
+            font-size: 14px;
             padding: 8px 0;
             border-bottom: 1px dotted #a32035;
             display: inline-block;
@@ -143,7 +149,7 @@
 
         .quote-list li {
             margin-bottom: 12px;
-            font-size: 12px;
+            font-size: 14px;
             line-height: 1.3;
             color: #000000;
         }

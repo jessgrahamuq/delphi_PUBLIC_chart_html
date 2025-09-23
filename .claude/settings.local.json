@@ -24,7 +24,10 @@
       "Bash(done)",
       "Bash(for:*)",
       "Bash(do echo \"Processing: $file\")",
-      "Bash(do echo \"File: $file\")"
+      "Bash(do echo \"File: $file\")",
+      "Read(//tmp/**)",
+      "Bash(chmod:*)",
+      "Bash(/tmp/process_batch.sh:*)"
     ],
     "deny": [],
     "ask": []
