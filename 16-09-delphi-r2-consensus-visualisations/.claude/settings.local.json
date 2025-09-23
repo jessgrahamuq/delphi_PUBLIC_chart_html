@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/universityofqueensland/Desktop/finished_qual_summaries_delphi/**)",
+      "Bash(grep:*)",
+      "Bash(xargs ls:*)",
+      "Bash(python3:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
