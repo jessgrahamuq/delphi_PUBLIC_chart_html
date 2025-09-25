@@ -30,7 +30,8 @@
       "Bash(/tmp/process_batch.sh:*)",
       "Bash(/tmp/update_css.sh:*)",
       "Bash(while read file)",
-      "Bash(do echo \"=== $file ===\")"
+      "Bash(do echo \"=== $file ===\")",
+      "Bash(while IFS= read -r file)"
     ],
     "deny": [],
     "ask": []
