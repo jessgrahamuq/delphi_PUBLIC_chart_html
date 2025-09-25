@@ -114,7 +114,6 @@
             display: flex;
             width: 100%;
             gap: 10px;
-            min-width: 0;
         }
 
         .content-column {
@@ -125,9 +124,7 @@
             flex: 1;
             min-width: 200px;
             overflow-wrap: break-word;
-            word-break: break-word;            min-width: 0;
-            overflow-wrap: break-word;
-        }
+            word-break: break-word;        }
 
         .criteria-header {
             font-size: 15px;
@@ -188,6 +185,42 @@
             color: #000000;
         }
 
+        @media (max-width: 768px) {
+            .content-grid {
+                gap: 10px;
+            }
+
+            .selection-title {
+
+
+                text-align: center;
+
+
+                font-size: 14px;
+
+
+                font-weight: 600;
+
+
+                color: #666666;
+
+
+                margin-bottom: 10px;
+
+
+            }
+
+
+
+            .nav-pills {
+                justify-content: flex-start;
+            }
+
+            .nav-pill {
+                font-size: 10px;
+                padding: 4px 8px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -219,12 +252,12 @@
                     <div class="content-column">
                         <h3 class="criteria-header higher">Reasons for Higher Responsibility</h3>
                         <div class="summary-section">
-                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments consistently emphasized GPAI developers' primary responsibility for creating and distributing systems that pollute the information ecosystem, with strong causal influence through model design, defaults, and release practices that shape misinformation supply. Multiple responses noted developers control personalization features and core capabilities that enable echo chambers, with one noting their need to ensure diverse training data to avoid model collapse.</p>
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments consistently emphasized GPAI developers' primary responsibility as they design systems generating and distributing false information, with complete knowledge of training data and system prompts, though building foundational architecture where false information originates.</p>
                             
             <details class="quote-details">
-                <summary class="quote-toggle">See all expert comments (6)</summary>
+                <summary class="quote-toggle">See all expert comments (3)</summary>
                 <ul class="quote-list">
-                    <li>"My assessments highlight that general-purpose developers and deployers are primarily responsible, since they create and distribute the AI systems that can pollute the information ecosystem."</li><li>"The primary burden lies on general-purpose AI developers who shape the core capabilities of models."</li><li>"- General-purpose AI developers: strong causal influence. Model design, defaults, tooling, and release practices shape misinformation supply; they can ship provenance/watermarking, detection APIs, rate limits, red-team and eval protocols."</li><li>"[1] AI Developer (general-purpose) - primarily responsible: I rated general-purpose AI developers as primarily responsible because they have ultimate control over model behavior and design. They make deliberate choices about personalization features, such as having models remember user chat history and preferences. These design decisions directly enable echo chambers by creating systems that increasingly align with users' existing beliefs rather than challenging them with diverse perspectives. They have both the technical capability and decision-making authority to prevent information ecosystem pollution."</li><li>"AI developers, deployers, and governments should fund AI literacy programs that go beyond teaching people merely how to use—or not misuse—the tools. Such programs should also focus on training individuals to critically assess AI outputs, given that current models are flawed, prone to hallucinations, and subject to bias."</li><li>"Primary responsibility should lie with AI model developers / vendors, due to the perverse incentives surrounding making AI output indistinguishable from human-created output."</li>
+                    <li>"general-purpose developers and deployers are primarily responsible as they design and operate the systems that most often generate and distribute false or misleading information."</li><li>"AI Developers (General-purpose and Specialized): Primarily responsible. They build the foundational architecture and tuning protocols that determine how information is generated filtered and validated. Without built-in alignment safeguards drift becomes inevitable."</li><li>"AI Developer (General-purpose) - Primarily Responsible: Developers have complete knowledge of their systems including training data system prompts and safety guidelines. With high technical ability and obligation they operate at the foundation level where false information originates."</li>
                 </ul>
             </details>
                         </div>
@@ -232,7 +265,7 @@
                     <div class="content-column">
                         <h3 class="criteria-header lower">Reasons for Lower Responsibility</h3>
                         <div class="summary-section">
-                            <p class="summary-text">One commenter said: "Reduced the level of responsibility of GPAI developers because this risk manifest mainly in the context of its deployment"</p>
+                            <p class="summary-text">No comments provided.</p>
                             
                         </div>
                     </div>
@@ -243,12 +276,12 @@
                     <div class="content-column">
                         <h3 class="criteria-header higher">Reasons for Higher Responsibility</h3>
                         <div class="summary-section">
-                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments unanimously emphasized deployers' primary to high responsibility for creating and distributing systems that can pollute the information ecosystem, with greatest operational capability through choosing fine-tunes, prompts, guardrails, and moderation. Multiple responses noted deployers should explain provenance of AI-generated content and bear responsibility for user-facing system design, though those using closed models have less control than developers.</p>
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments consistently rated deployers as primarily to highly responsible for deciding deployment contexts and creating safety guidelines, though their ability is constrained with closed-source models where they lack access to inner workings.</p>
                             
             <details class="quote-details">
-                <summary class="quote-toggle">See all expert comments (6)</summary>
+                <summary class="quote-toggle">See all expert comments (4)</summary>
                 <ul class="quote-list">
-                    <li>"My assessments highlight that general-purpose developers and deployers are primarily responsible, since they create and distribute the AI systems that can pollute the information ecosystem."</li><li>"...deployers and governance actors serve as critical buffers and enablers of (or protection from) misuse."</li><li>"- AI deployers: greatest operational capability. They choose fine-tunes, prompts, guardrails, moderation, UX, and distribution; they monitor misuse and can throttle or roll back."</li><li>"[2] AI Deployer - highly responsible: AI deployers bear high responsibility as they design the user-facing systems and can choose how to implement personalization features on their platforms. However, when using closed models via APIs, they have less control than general-purpose developers since they don't have full visibility into the underlying model architecture and behavior."</li><li>"AI Deployers are responsible to delivering content, but that may need to appeal to users. Deployers should explain provenance of AI-generated content as possible."</li><li>"AI developers, deployers, and governments should fund AI literacy programs that go beyond teaching people merely how to use—or not misuse—the tools. Such programs should also focus on training individuals to critically assess AI outputs, given that current models are flawed, prone to hallucinations, and subject to bias."</li>
+                    <li>"general-purpose developers and deployers are primarily responsible as they design and operate the systems that most often generate and distribute false or misleading information."</li><li>"AI Deployers: Highly responsible. They decide how where and to whom these models are deployed. If deployment occurs in sensitive contexts (e.g. healthcare education law) oversight mechanisms must be in place."</li><li>"AI Deployer - Highly Responsible: Deployers must thoroughly test systems and create appropriate safety guidelines giving them high obligation and causal influence. However their ability is constrained with closed-source models where they lack access to inner workings and original system prompts that guide behavior."</li><li>"AI Deployers are responsible for the use of models within a context. Stochastic models should not be treated as oracles of ground truth - some other curated reference should be used to establish veracity. AI Deployers are responsible for indicating when responses come strictly for models or when there is associated ground truth data to establish their claims."</li>
                 </ul>
             </details>
                         </div>
@@ -267,12 +300,12 @@
                     <div class="content-column">
                         <h3 class="criteria-header higher">Reasons for Higher Responsibility</h3>
                         <div class="summary-section">
-                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments overwhelmingly rated governance actors as highly responsible for regulation, transparency requirements, and oversight essential to mitigate filter bubbles and disinformation. Multiple responses emphasized their obligation to set provenance/transparency rules, fund detection capacity, and coordinate public-information safeguards, with one noting they should promote diverse and healthy ecosystems for reality-based information. Some comments noted governance actors shouldn't legislate shared reality for freedom of speech reasons.</p>
+                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments overwhelmingly emphasized governance actors' primary to high responsibility for enforcing standards, compliance, and auditing across the ecosystem, with unique positioning to close accountability loops and facilitate tech-literacy.</p>
                             
             <details class="quote-details">
-                <summary class="quote-toggle">See all expert comments (7)</summary>
+                <summary class="quote-toggle">See all expert comments (4)</summary>
                 <ul class="quote-list">
-                    <li>"Governance actors are highly responsible, as regulation, transparency requirements, and oversight are essential to mitigate filter bubbles and disinformation campaigns."</li><li>"...deployers and governance actors serve as critical buffers and enablers of (or protection from) misuse."</li><li>"I so not see a techical or market-based fix to loss of consensus reality risks, therefore it becomes a regulatory problem. Specifically, regulators can take initiatives to promote a diverse and healthy ecosystem for reality-based information,"</li><li>"#NAME?"</li><li>"[3] AI Governance Actor - highly responsible: Governance actors are highly responsible because they set standards and regulations that could prevent or mitigate information ecosystem pollution. Though they lack direct technical control over individual models."</li><li>"AI developers, deployers, and governments should fund AI literacy programs that go beyond teaching people merely how to use—or not misuse—the tools. Such programs should also focus on training individuals to critically assess AI outputs, given that current models are flawed, prone to hallucinations, and subject to bias."</li><li>"AI Governance Actor - highly responsible, due to the reason that the regulatory frameworks requiring algorithmic transparency and content diversity where the EU's Digital Services Act represents the first major attempt to address this gap."</li>
+                    <li>"Governance actors are also highly responsible since effective regulation and auditing frameworks are required to ensure systemic accountability."</li><li>"AI Governance Actors: Primarily responsible. These actors are uniquely positioned to enforce standards compliance and auditability across the ecosystem. Without governance no accountability loop is closed."</li><li>"AI Governance Actor - Highly Responsible: They have authority to create policies and standards bearing responsibility for proper oversight and defining acceptable AI behavior. Though they may lack technical expertise for direct modification they set the regulatory framework."</li><li>"It's hard to hold anyone primarily responsible for false information as many systems (like generative LLMs) are essentially text prediction engines. It seems that governance actors and the users themselves should do a better job at facilitating tech-literacy."</li>
                 </ul>
             </details>
                         </div>
@@ -280,14 +313,8 @@
                     <div class="content-column">
                         <h3 class="criteria-header lower">Reasons for Lower Responsibility</h3>
                         <div class="summary-section">
-                            <p class="summary-text">[SUMMARY NOT FOUND - SUMMARY NEEDED]</p>
+                            <p class="summary-text">No comments provided.</p>
                             
-            <details class="quote-details">
-                <summary class="quote-toggle">See all expert comments (2)</summary>
-                <ul class="quote-list">
-                    <li>"For some other AI harms, we may want the government regulator to absolutely forbid certain behaviors or the the AI developer to voluntarily absolutely abstain from certain behaviors in the absence of regulation, but for the information ecosystem, we don't want either of those entities to try to legislate a shared reality."</li><li>"Governance has little to offer here besides offering some oracle for 'ground truth.'"</li>
-                </ul>
-            </details>
                         </div>
                     </div>
                 </div>
@@ -297,27 +324,15 @@
                     <div class="content-column">
                         <h3 class="criteria-header higher">Reasons for Higher Responsibility</h3>
                         <div class="summary-section">
-                            <p class="summary-text">[SUMMARY NOT FOUND - SUMMARY NEEDED]</p>
+                            <p class="summary-text">One commenter said: "High responsibility for AI deployers because it can be up to them to implement their own safeguards and filters. Moderate responsibility for AI users because it is also up to them to cross-check any information received."</p>
                             
-            <details class="quote-details">
-                <summary class="quote-toggle">See all expert comments (2)</summary>
-                <ul class="quote-list">
-                    <li>"I marked AI User as moderately responsible because I think a focus on personal responsibility to remain skeptical of information presented is important."</li><li>"It's incumbent upon users and stakeholders to understand that provenance is as important as content when evaluating information."</li>
-                </ul>
-            </details>
                         </div>
                     </div>
                     <div class="content-column">
                         <h3 class="criteria-header lower">Reasons for Lower Responsibility</h3>
                         <div class="summary-section">
-                            <p class="summary-text"><strong>Summary of expert comments:</strong> Comments varied widely on user responsibility, with most characterizing users as having minimal responsibility due to lack of systemic influence and limited capability. However, several noted moderate responsibility for personal skepticism, understanding provenance importance, and potential to amplify negative effects through content distribution. One comment emphasized users' deliberate employment of AI for campaigns bears direct responsibility.</p>
+                            <p class="summary-text">One commenter said: "AI Users: Minimally responsible. While users can report issues or misuse they cannot fix or trace the root causes. Burdening them with more responsibility than they are structurally equipped to hold creates a dangerous deflection of accountability."</p>
                             
-            <details class="quote-details">
-                <summary class="quote-toggle">See all expert comments (4)</summary>
-                <ul class="quote-list">
-                    <li>"Users and affected stakeholders cannot reasonably be held responsible, as they lack systemic influence."</li><li>"Users and infrastructure providers are downstream and have less direct influence, though user education remains important."</li><li>"Low responsibility: AI users (limited capability)."</li><li>"AI User - moderately responsible: Average users have moderate responsibility because most don't understand how AI personalization works or recognize echo chamber formation. It's unrealistic to expect all users to be critical thinkers about AI behavior or to understand the philosophical implications of personalized responses. They often believe AI outputs are objectively correct rather than tailored to their preferences."</li>
-                </ul>
-            </details>
                         </div>
                     </div>
                 </div>

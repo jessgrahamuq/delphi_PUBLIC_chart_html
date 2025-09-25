@@ -31,7 +31,8 @@
       "Bash(/tmp/update_css.sh:*)",
       "Bash(while read file)",
       "Bash(do echo \"=== $file ===\")",
-      "Bash(while IFS= read -r file)"
+      "Bash(while IFS= read -r file)",
+      "Bash(xargs sed:*)"
     ],
     "deny": [],
     "ask": []
